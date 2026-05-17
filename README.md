@@ -4,10 +4,6 @@
 
 **航空摄影内容社区 · Ticket（奖励机票/积分票）工具子站 · iOS26 Aurora UI**
 
-<img
-  src="https://capsule-render.vercel.app/api?type=waving&height=240&color=0:0ea5e9,35:22c55e,70:a78bfa,100:38bdf8&text=FlightBox&fontColor=ffffff&fontSize=62&fontAlignY=38&desc=Jameswan%20%C2%B7%20AviSpotters%20%C2%B7%20iOS26%20Aurora%20UI%20%C2%B7%20Ticket%20Award%20Search&descAlignY=62&descSize=18"
-  alt="Aurora banner"
-/>
 
 <img
   src="https://readme-typing-svg.demolab.com?font=Inter&weight=700&size=18&duration=2600&pause=900&color=38BDF8&center=true&vCenter=true&width=900&lines=iOS26+Aurora+UI+%E2%80%A2+Glassmorphism+%E2%80%A2+Aurora+Gradient;Aviation+Photography+Community+%E2%80%A2+Moderation+%E2%80%A2+Admin+Controls;Ticket+Award+Search+%E2%80%A2+FX+Conversion+%E2%80%A2+Cost+Estimation"
