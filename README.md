@@ -1,6 +1,6 @@
 <div align="center">
 
-# Jameswan · AviSpotters / FlightBox
+# AviSpotters
 
 **航空摄影内容社区 · Ticket（奖励机票/积分票）工具子站 · iOS26 Aurora UI**
 
