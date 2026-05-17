@@ -1,0 +1,24 @@
+[
+  {
+    "manufacturerId": "McDonnellDouglas",
+    "familyId": "MD-80",
+    "name": "MD-80",
+    "description": "雙發窄體客機系列（含 MD-81/82/83/88 等），曾是短中程航線主力。",
+    "models": ["MD-82"]
+  },
+  {
+    "manufacturerId": "McDonnellDouglas",
+    "familyId": "MD-11",
+    "name": "MD-11",
+    "description": "三發寬體客機/貨機，現多見於貨運用途。",
+    "models": ["MD-11F"]
+  },
+  {
+    "manufacturerId": "McDonnellDouglas",
+    "familyId": "DC-10",
+    "name": "DC-10",
+    "description": "三發寬體客機系列（含客機與貨機衍生型）。",
+    "models": ["DC-10-30"]
+  }
+]
+

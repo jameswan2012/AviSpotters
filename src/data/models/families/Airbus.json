@@ -1,0 +1,45 @@
+[
+  {
+    "manufacturerId": "Airbus",
+    "familyId": "A220",
+    "name": "A220",
+    "description": "A220（原 CSeries）為窄體短中程客機系列，常見於中短程與高頻航線。",
+    "models": ["A220-100", "A220-300"]
+  },
+  {
+    "manufacturerId": "Airbus",
+    "familyId": "A320",
+    "name": "A320 Family",
+    "description": "窄體短中程客機系列，含 A319/A320/A321 與 neo 版本。",
+    "models": ["A320-200", "A320neo", "A321neo", "A321XLR"]
+  },
+  {
+    "manufacturerId": "Airbus",
+    "familyId": "A330",
+    "name": "A330",
+    "description": "雙發寬體中長程客機系列。",
+    "models": ["A330-900"]
+  },
+  {
+    "manufacturerId": "Airbus",
+    "familyId": "A340",
+    "name": "A340",
+    "description": "四發寬體長程客機系列（含 -200/-300/-500/-600）。",
+    "models": ["A340-300"]
+  },
+  {
+    "manufacturerId": "Airbus",
+    "familyId": "A350",
+    "name": "A350",
+    "description": "新世代長程寬體客機系列。",
+    "models": ["A350-900", "A350-1000"]
+  },
+  {
+    "manufacturerId": "Airbus",
+    "familyId": "A380",
+    "name": "A380",
+    "description": "雙層超大型四發寬體客機，常見於樞紐航線高密度市場。",
+    "models": ["A380-800"]
+  }
+]
+

@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Bombardier",
+  "familyId": "CRJ",
+  "modelId": "CRJ-900",
+  "name": "CRJ-900",
+  "introduced": 2003,
+  "productionStatus": "in-service",
+  "firstFlight": "2001-02-21",
+  "summary": "CRJ-900 為 CRJ 系列常見延長型號之一，常用於區域/支線航線與樞紐接駁。",
+  "passengerCapacity": { "typical": 76, "max": 90 },
+  "rangeKm": 2956,
+  "cruiseSpeedKmh": 829,
+  "mtowKg": 38000,
+  "engines": ["GE CF34-8C5"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12J/64Y" }],
+  "majorOperators": ["Delta Connection", "Lufthansa CityLine"],
+  "manufacturersNotes": "CRJ 系列在區域市場長期佔有一席之地，座級與航程配置多樣。",
+  "buyingCustomers": [{ "airline": "Delta Connection", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Delta_Connection_CRJ-900_N806SK.jpg/1280px-Delta_Connection_CRJ-900_N806SK.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Lufthansa_CityLine_CRJ-900_D-ACNO.jpg/1280px-Lufthansa_CityLine_CRJ-900_D-ACNO.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Bombardier_CRJ900",
+  "slug": "Bombardier-CRJ-900",
+  "keywords": ["CRJ-900", "CRJ900", "CRJ9", "Bombardier CRJ-900"]
+}
+

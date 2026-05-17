@@ -1,0 +1,37 @@
+import { NextResponse } from "next/server";
+import { prisma } from "@/lib/db";
+
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const page = Math.max(1, Number(searchParams.get("page") || "1"));
+  const limit = Math.min(50, Math.max(1, Number(searchParams.get("limit") || "20")));
+  const skip = (page - 1) * limit;
+
+  const [total, rows] = await Promise.all([
+    prisma.photo.count({ where: { status: "approved" } }),
+    prisma.photo.findMany({
+      where: { status: "approved" },
+      orderBy: [{ createdAt: "desc" }],
+      skip,
+      take: limit,
+      select: {
+        id: true,
+        title: true,
+        registration: true,
+        airline: true,
+        aircraftModel: true,
+        shotAirport: true,
+        status: true,
+        hot: true,
+      },
+    }),
+  ]);
+
+  return NextResponse.json({
+    page,
+    limit,
+    total,
+    hasMore: skip + rows.length < total,
+    photos: rows,
+  });
+}

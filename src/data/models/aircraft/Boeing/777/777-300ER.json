@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "777",
+  "modelId": "777-300ER",
+  "name": "777-300ER",
+  "introduced": 2004,
+  "productionStatus": "in-service",
+  "firstFlight": "2003-02-24",
+  "summary": "777-300ER 為 777 家族的延程型號，長期為多家航司的長程主力機型之一。",
+  "passengerCapacity": { "typical": 368, "max": 550 },
+  "rangeKm": 13650,
+  "cruiseSpeedKmh": 905,
+  "mtowKg": 351534,
+  "engines": ["GE90-115B"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "8F/52J/24W/284Y" }],
+  "majorOperators": ["Emirates", "Singapore Airlines", "Cathay Pacific"],
+  "manufacturersNotes": "777-300ER 以高載重與長航程著稱，也是許多航司在 A380/747 之後的長程替代方案之一。",
+  "buyingCustomers": [{ "airline": "Emirates", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Boeing_777-31H%28ER%29_Emirates_A6-EGI.jpg/1280px-Boeing_777-31H%28ER%29_Emirates_A6-EGI.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Singapore_Airlines_Boeing_777-300ER_9V-SWQ.jpg/1280px-Singapore_Airlines_Boeing_777-300ER_9V-SWQ.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_777",
+  "slug": "Boeing-777-300ER",
+  "keywords": ["777-300ER", "B77W", "Boeing 777-300ER", "777-300 ER"]
+}
+

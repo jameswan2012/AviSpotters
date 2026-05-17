@@ -1,0 +1,17 @@
+[
+  {
+    "manufacturerId": "ATR",
+    "familyId": "ATR-42",
+    "name": "ATR 42",
+    "description": "短程渦槳支線客機系列（現代主力為 -600）。",
+    "models": ["ATR-42-600"]
+  },
+  {
+    "manufacturerId": "ATR",
+    "familyId": "ATR-72",
+    "name": "ATR 72",
+    "description": "較大載客量的渦槳支線客機系列（現代主力為 -600）。",
+    "models": ["ATR-72-600"]
+  }
+]
+

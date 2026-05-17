@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "COMAC",
+  "familyId": "C919",
+  "modelId": "C919",
+  "name": "C919",
+  "introduced": 2023,
+  "productionStatus": "in-service",
+  "firstFlight": "2017-05-05",
+  "summary": "C919 為單通道窄體客機，對標 A320/737 座級，逐步擴大交付與營運航線。",
+  "passengerCapacity": { "typical": 158, "max": 192 },
+  "rangeKm": 5555,
+  "cruiseSpeedKmh": 871,
+  "mtowKg": 72500,
+  "engines": ["CFM LEAP-1C"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "8J/150Y" }],
+  "majorOperators": ["China Eastern Airlines"],
+  "manufacturersNotes": "C919 導入後，常見於國內幹線航段，以累積機隊經驗與可靠度數據。",
+  "buyingCustomers": [{ "airline": "China Eastern", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/COMAC_C919_B-919A.jpg/1280px-COMAC_C919_B-919A.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/China_Eastern_COMAC_C919_B-919C.jpg/1280px-China_Eastern_COMAC_C919_B-919C.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Comac_C919",
+  "slug": "COMAC-C919",
+  "keywords": ["C919", "COMAC C919", "C-919"]
+}
+

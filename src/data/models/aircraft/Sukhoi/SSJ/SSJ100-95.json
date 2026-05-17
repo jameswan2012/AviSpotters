@@ -1,0 +1,34 @@
+{
+  "manufacturerId": "Sukhoi",
+  "familyId": "SSJ",
+  "modelId": "SSJ100-95",
+  "name": "SSJ100-95",
+  "introduced": 2011,
+  "productionStatus": "in-service",
+  "firstFlight": "2008-05-19",
+  "summary": "Sukhoi Superjet 100（SSJ100）為支線噴射客機系列，主要面向短中程與區域航線。",
+  "passengerCapacity": { "typical": 87, "max": 108 },
+  "rangeKm": 3000,
+  "cruiseSpeedKmh": 828,
+  "mtowKg": 49450,
+  "engines": ["PowerJet SaM146"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12J/75Y" }],
+  "majorOperators": ["Aeroflot (historical/operations)", "Azimuth Airlines"],
+  "manufacturersNotes": "SSJ100 在支線市場以 2-3/2-2 等不同布局配置服務短中程航線；不同批次與改良型在系統與支援上有差異。",
+  "buyingCustomers": [{ "airline": "Aeroflot", "orders": null }],
+  "accidents": [
+    {
+      "date": "2019-05-05",
+      "summary": "涉及重大事件（此處為示例佔位，請以權威來源補齊細節）。",
+      "link": "https://en.wikipedia.org/wiki/Sukhoi_Superjet_100"
+    }
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Sukhoi_Superjet_100-95B_RA-89098.jpg/1280px-Sukhoi_Superjet_100-95B_RA-89098.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Azimut_Sukhoi_Superjet_100_RA-89081.jpg/1280px-Azimut_Sukhoi_Superjet_100_RA-89081.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Sukhoi_Superjet_100",
+  "slug": "Sukhoi-SSJ100-95",
+  "keywords": ["SSJ100", "SSJ-100", "Superjet 100", "SSJ100-95", "Sukhoi Superjet"]
+}
+

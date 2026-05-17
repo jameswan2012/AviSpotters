@@ -1,0 +1,10 @@
+[
+  {
+    "manufacturerId": "Sukhoi",
+    "familyId": "SSJ",
+    "name": "Superjet",
+    "description": "支線噴射客機家族（常見型號為 SSJ100）。",
+    "models": ["SSJ100-95"]
+  }
+]
+

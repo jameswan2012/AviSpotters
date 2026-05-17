@@ -1,0 +1,25 @@
+{
+  "manufacturerId": "Irkut",
+  "familyId": "MC-21",
+  "modelId": "MC-21-300",
+  "name": "MC-21-300",
+  "productionStatus": "planned",
+  "firstFlight": "2017-05-28",
+  "summary": "MC-21-300 為單通道窄體客機型號，面向短中程市場，規劃以不同引擎/系統配置投入營運。",
+  "passengerCapacity": { "typical": 163, "max": 211 },
+  "rangeKm": 6000,
+  "cruiseSpeedKmh": 870,
+  "mtowKg": 79000,
+  "engines": ["Pratt & Whitney PW1400G (planned/variants)", "Aviadvigatel PD-14 (variants)"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12J/151Y" }],
+  "majorOperators": [],
+  "manufacturersNotes": "MC-21 的市場與交付節奏依供應鏈、認證與客戶導入而調整，數據與配置以官方/權威來源為準。",
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Irkut_MC-21-300_RA-73051.jpg/1280px-Irkut_MC-21-300_RA-73051.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Irkut_MC-21-300_RA-73055.jpg/1280px-Irkut_MC-21-300_RA-73055.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Irkut_MC-21",
+  "slug": "Irkut-MC-21-300",
+  "keywords": ["MC-21", "MC-21-300", "Irkut MC-21", "MS-21"]
+}
+

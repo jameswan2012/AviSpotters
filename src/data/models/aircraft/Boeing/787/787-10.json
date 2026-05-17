@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "787",
+  "modelId": "787-10",
+  "name": "787-10",
+  "introduced": 2018,
+  "productionStatus": "in-service",
+  "firstFlight": "2017-03-31",
+  "summary": "787 家族加長型號，強調在中長程市場提供更高載客量與效率，常用於高需求航線。",
+  "passengerCapacity": { "typical": 330, "max": 440 },
+  "rangeKm": 11910,
+  "cruiseSpeedKmh": 903,
+  "mtowKg": 254011,
+  "engines": ["GEnx-1B", "Rolls-Royce Trent 1000"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "40J/290Y" }],
+  "majorOperators": ["Singapore Airlines", "United Airlines"],
+  "manufacturersNotes": "787-10 相較 -8/-9 具更高運能但航程較短，適合高密度中長程航線。",
+  "buyingCustomers": [{ "airline": "Singapore Airlines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Singapore_Airlines_Boeing_787-10_9V-SCA.jpg/1280px-Singapore_Airlines_Boeing_787-10_9V-SCA.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/United_Airlines_Boeing_787-10_N12010.jpg/1280px-United_Airlines_Boeing_787-10_N12010.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_787_Dreamliner",
+  "slug": "Boeing-787-10",
+  "keywords": ["787-10", "B78X", "Boeing 787-10", "787-10 Dreamliner"]
+}
+

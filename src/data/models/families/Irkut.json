@@ -1,0 +1,10 @@
+[
+  {
+    "manufacturerId": "Irkut",
+    "familyId": "MC-21",
+    "name": "MC-21",
+    "description": "單通道窄體客機家族（含 MC-21-300 等型號）。",
+    "models": ["MC-21-300"]
+  }
+]
+

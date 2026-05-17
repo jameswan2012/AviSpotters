@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "777",
+  "modelId": "777-200ER",
+  "name": "777-200ER",
+  "introduced": 1997,
+  "productionStatus": "in-service",
+  "firstFlight": "1996-10-07",
+  "summary": "777-200ER 為延程型號之一，曾是許多航司跨洋/長程航線主力平台，並有多樣客艙與航程配置。",
+  "passengerCapacity": { "typical": 314, "max": 440 },
+  "rangeKm": 14305,
+  "cruiseSpeedKmh": 905,
+  "mtowKg": 297560,
+  "engines": ["GE90", "Pratt & Whitney PW4000", "Rolls-Royce Trent 800 (variants)"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "8F/42J/24W/240Y" }],
+  "majorOperators": ["United Airlines (historical/operations)", "British Airways (historical/operations)"],
+  "manufacturersNotes": "777-200ER 在雙發長程營運成熟後成為代表機型之一，衍生多種引擎與重量/航程選項。",
+  "buyingCustomers": [{ "airline": "United Airlines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/British_Airways_Boeing_777-236ER_G-VIIA.jpg/1280px-British_Airways_Boeing_777-236ER_G-VIIA.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/United_Airlines_Boeing_777-200ER_N76010.jpg/1280px-United_Airlines_Boeing_777-200ER_N76010.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_777",
+  "slug": "Boeing-777-200ER",
+  "keywords": ["777-200ER", "B772", "Boeing 777-200ER", "772ER"]
+}
+

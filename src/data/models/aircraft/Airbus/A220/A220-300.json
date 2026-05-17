@@ -1,0 +1,40 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A220",
+  "modelId": "A220-300",
+  "name": "A220-300",
+  "introduced": 2016,
+  "productionStatus": "in-service",
+  "firstFlight": "2015-02-27",
+  "summary": "A220-300（原 CSeries CS300）是窄體短中程客機，常被用於高頻航線與較薄航線的主力機型。",
+  "passengerCapacity": { "typical": 130, "max": 160 },
+  "rangeKm": 6110,
+  "cruiseSpeedKmh": 871,
+  "mtowKg": 70500,
+  "engines": ["Pratt & Whitney PW1500G"],
+  "layouts": [
+    { "name": "Typical 2-class", "seats": "12J/118Y" },
+    { "name": "High density", "seats": "160Y" }
+  ],
+  "majorOperators": ["airBaltic", "Delta Air Lines", "Air France"],
+  "manufacturersNotes": "A220 系列以較寬客艙與現代化航電/引擎方案切入 100–160 座級市場。",
+  "buyingCustomers": [
+    { "airline": "Delta Air Lines", "orders": null },
+    { "airline": "airBaltic", "orders": null }
+  ],
+  "accidents": [
+    {
+      "date": "2019-12-22",
+      "summary": "部分事件多與營運環境與程序相關（此處為示例佔位，請以權威來源補齊）。",
+      "link": "https://en.wikipedia.org/wiki/Airbus_A220"
+    }
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Airbus_A220-300_%28CSeries_CS300%29_Swiss_HB-JCA.jpg/1280px-Airbus_A220-300_%28CSeries_CS300%29_Swiss_HB-JCA.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Airbus_A220-300_Delta_N302DU.jpg/1280px-Airbus_A220-300_Delta_N302DU.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A220",
+  "slug": "Airbus-A220-300",
+  "keywords": ["A220-300", "A223", "CS300", "CSeries CS300", "BCS3", "Airbus A220-300"]
+}
+

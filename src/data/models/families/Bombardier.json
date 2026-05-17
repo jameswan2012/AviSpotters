@@ -1,0 +1,17 @@
+[
+  {
+    "manufacturerId": "Bombardier",
+    "familyId": "CRJ",
+    "name": "CRJ",
+    "description": "CRJ 區域噴射客機家族，常見於支線/區域航線。",
+    "models": ["CRJ-900"]
+  },
+  {
+    "manufacturerId": "Bombardier",
+    "familyId": "Dash-8",
+    "name": "Dash 8",
+    "description": "渦槳支線客機家族，其中 Q400（-400）以速度與載客著稱。",
+    "models": ["Q400"]
+  }
+]
+

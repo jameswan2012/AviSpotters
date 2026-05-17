@@ -1,0 +1,17 @@
+[
+  {
+    "manufacturerId": "COMAC",
+    "familyId": "ARJ21",
+    "name": "ARJ21",
+    "description": "中國商飛支線噴射客機系列（含 ARJ21-700）。",
+    "models": ["ARJ21-700"]
+  },
+  {
+    "manufacturerId": "COMAC",
+    "familyId": "C919",
+    "name": "C919",
+    "description": "單通道窄體客機，對標 A320/737 級別市場。",
+    "models": ["C919"]
+  }
+]
+

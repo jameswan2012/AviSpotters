@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "787",
+  "modelId": "787-9",
+  "name": "787-9",
+  "introduced": 2014,
+  "productionStatus": "in-service",
+  "firstFlight": "2013-09-17",
+  "summary": "787 Dreamliner 家族的延程型號之一，兼具長航程與燃油效率，常見於中長程與長程航線。",
+  "passengerCapacity": { "typical": 290, "max": 420 },
+  "rangeKm": 14140,
+  "cruiseSpeedKmh": 903,
+  "mtowKg": 254011,
+  "engines": ["GEnx-1B", "Rolls-Royce Trent 1000"],
+  "layouts": [{ "name": "Typical 2/3-class", "seats": "30J/28W/230Y" }],
+  "majorOperators": ["United Airlines", "ANA", "Air New Zealand", "Qatar Airways"],
+  "manufacturersNotes": "787 系列以複合材料機身、較低客艙高度與新一代引擎帶來的效率提升為主要賣點。",
+  "buyingCustomers": [{ "airline": "ANA", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Boeing_787-9_Dreamliner_ZK-NZE_Air_New_Zealand.jpg/1280px-Boeing_787-9_Dreamliner_ZK-NZE_Air_New_Zealand.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Boeing_787-9_Qatar_Airways_A7-BHC.jpg/1280px-Boeing_787-9_Qatar_Airways_A7-BHC.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_787_Dreamliner",
+  "slug": "Boeing-787-9",
+  "keywords": ["787-9", "B789", "Boeing 787-9", "787 Dreamliner"]
+}
+

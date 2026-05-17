@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "COMAC",
+  "familyId": "ARJ21",
+  "modelId": "ARJ21-700",
+  "name": "ARJ21-700",
+  "introduced": 2016,
+  "productionStatus": "in-service",
+  "firstFlight": "2008-11-28",
+  "summary": "ARJ21-700 為支線噴射客機，主要面向國內支線與區域航線市場。",
+  "passengerCapacity": { "typical": 78, "max": 90 },
+  "rangeKm": 3700,
+  "cruiseSpeedKmh": 825,
+  "mtowKg": 40700,
+  "engines": ["GE CF34-10A"],
+  "layouts": [{ "name": "Typical single/2-class", "seats": "78Y" }],
+  "majorOperators": ["Chengdu Airlines", "China Southern (subsidiary/operations)"],
+  "manufacturersNotes": "ARJ21 為中國商飛早期投入營運的支線機型，後續衍生更多市場與任務配置。",
+  "buyingCustomers": [{ "airline": "Chengdu Airlines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/COMAC_ARJ21-700_B-3321.jpg/1280px-COMAC_ARJ21-700_B-3321.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Chengdu_Airlines_COMAC_ARJ21-700_B-3322.jpg/1280px-Chengdu_Airlines_COMAC_ARJ21-700_B-3322.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Comac_ARJ21",
+  "slug": "COMAC-ARJ21-700",
+  "keywords": ["ARJ21", "ARJ21-700", "COMAC ARJ21", "C909"]
+}
+

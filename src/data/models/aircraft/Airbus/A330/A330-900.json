@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A330",
+  "modelId": "A330-900",
+  "name": "A330-900 (neo)",
+  "introduced": 2018,
+  "productionStatus": "in-service",
+  "firstFlight": "2017-10-19",
+  "summary": "A330neo 系列主力型號之一，延續 A330 平台並搭配新一代引擎與翼尖改良，定位於中長程寬體市場。",
+  "passengerCapacity": { "typical": 287, "max": 460 },
+  "rangeKm": 13334,
+  "cruiseSpeedKmh": 871,
+  "mtowKg": 251000,
+  "engines": ["Rolls-Royce Trent 7000"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "30J/21W/236Y" }],
+  "majorOperators": ["Delta Air Lines", "TAP Air Portugal", "Virgin Atlantic"],
+  "manufacturersNotes": "A330neo 以較低導入成本與新引擎效率，成為部分航司替換/擴充寬體機隊的選項。",
+  "buyingCustomers": [{ "airline": "Delta Air Lines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Airbus_A330-941_%28F-WWKM%29_Airbus_Industrie.jpg/1280px-Airbus_A330-941_%28F-WWKM%29_Airbus_Industrie.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/TAP_Air_Portugal_Airbus_A330-900_CS-TUB.jpg/1280px-TAP_Air_Portugal_Airbus_A330-900_CS-TUB.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A330neo",
+  "slug": "Airbus-A330-900",
+  "keywords": ["A330-900", "A339", "A330neo", "Airbus A330-900", "A330-900neo"]
+}
+

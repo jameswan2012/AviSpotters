@@ -1,0 +1,17 @@
+[
+  {
+    "manufacturerId": "Embraer",
+    "familyId": "E-Jets",
+    "name": "E-Jets (1st gen)",
+    "description": "E170/E175/E190/E195 等支線噴射客機系列，常見於區域航線與高頻短中程。",
+    "models": ["E175", "E190"]
+  },
+  {
+    "manufacturerId": "Embraer",
+    "familyId": "E2",
+    "name": "E-Jets E2",
+    "description": "E2 新世代系列（E190-E2/E195-E2），提升燃油效率與航程。",
+    "models": ["E195-E2"]
+  }
+]
+

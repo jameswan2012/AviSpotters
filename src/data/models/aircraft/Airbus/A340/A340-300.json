@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A340",
+  "modelId": "A340-300",
+  "name": "A340-300",
+  "introduced": 1993,
+  "productionStatus": "out-of-production",
+  "firstFlight": "1991-10-25",
+  "summary": "A340-300 為四發長程寬體客機，曾廣泛服務於長程航線，現多已退役或轉入少數用途。",
+  "passengerCapacity": { "typical": 295, "max": 440 },
+  "rangeKm": 13700,
+  "cruiseSpeedKmh": 881,
+  "mtowKg": 275000,
+  "engines": ["CFM56-5C"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "30J/24W/241Y" }],
+  "majorOperators": ["Lufthansa (historical)", "Air France (historical)", "Iberia (historical)"],
+  "manufacturersNotes": "A340 的四發配置在 ETOPS 尚未成熟的年代提供長程營運彈性，後續市場逐步轉向更高效率的雙發寬體。",
+  "buyingCustomers": [{ "airline": "Lufthansa", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Lufthansa_Airbus_A340-313_D-AIFC.jpg/1280px-Lufthansa_Airbus_A340-313_D-AIFC.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Air_France_Airbus_A340-313_F-GLZR.jpg/1280px-Air_France_Airbus_A340-313_F-GLZR.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A340",
+  "slug": "Airbus-A340-300",
+  "keywords": ["A340-300", "A343", "Airbus A340-300", "A340"]
+}
+

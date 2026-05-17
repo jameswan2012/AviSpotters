@@ -1,0 +1,30 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "737",
+  "modelId": "737-900ER",
+  "name": "737-900ER",
+  "introduced": 2007,
+  "productionStatus": "in-service",
+  "firstFlight": "2006-08-03",
+  "summary": "737 NG 系列的加長延程型號，常見於高密度短中程航線與部分傳統航司的中短程市場。",
+  "passengerCapacity": { "typical": 180, "max": 220 },
+  "rangeKm": 5925,
+  "cruiseSpeedKmh": 842,
+  "mtowKg": 85139,
+  "engines": ["CFM56-7B"],
+  "layouts": [
+    { "name": "Typical 2-class", "seats": "16F/164Y" },
+    { "name": "High density", "seats": "220Y" }
+  ],
+  "majorOperators": ["Alaska Airlines", "Delta Air Lines", "United Airlines"],
+  "manufacturersNotes": "737-900ER 透過額外緊急出口與結構/性能調整，使加長機身仍能滿足營運需求。",
+  "buyingCustomers": [{ "airline": "Alaska Airlines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Alaska_Airlines_Boeing_737-900ER_N492AS.jpg/1280px-Alaska_Airlines_Boeing_737-900ER_N492AS.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/United_Airlines_Boeing_737-900ER_N75435.jpg/1280px-United_Airlines_Boeing_737-900ER_N75435.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_737_Next_Generation",
+  "slug": "Boeing-737-900ER",
+  "keywords": ["737-900ER", "B739", "Boeing 737-900ER", "737 NG 900ER"]
+}
+

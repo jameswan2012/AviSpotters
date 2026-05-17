@@ -1,0 +1,45 @@
+[
+  {
+    "manufacturerId": "Boeing",
+    "familyId": "737",
+    "name": "737",
+    "description": "窄體短中程客機系列，全球最常見機型家族之一。",
+    "models": ["737-700", "737-800", "737-8-MAX", "737-900ER"]
+  },
+  {
+    "manufacturerId": "Boeing",
+    "familyId": "747",
+    "name": "747",
+    "description": "四發寬體客機家族（含客機與貨機），其中 747-400 與 747-8 為代表型號。",
+    "models": ["747-400", "747-8F"]
+  },
+  {
+    "manufacturerId": "Boeing",
+    "familyId": "757",
+    "name": "757",
+    "description": "窄體中程客機家族，常見於中短程與高性能起降需求航線。",
+    "models": ["757-200"]
+  },
+  {
+    "manufacturerId": "Boeing",
+    "familyId": "767",
+    "name": "767",
+    "description": "雙發寬體中長程客機家族，亦有貨機與加油機衍生型。",
+    "models": ["767-300ER", "767-300F"]
+  },
+  {
+    "manufacturerId": "Boeing",
+    "familyId": "777",
+    "name": "777",
+    "description": "雙發寬體長程客機系列。",
+    "models": ["777-200ER", "777-300ER", "777F"]
+  },
+  {
+    "manufacturerId": "Boeing",
+    "familyId": "787",
+    "name": "787",
+    "description": "新世代複合材料長程寬體客機系列。",
+    "models": ["787-8", "787-9", "787-10"]
+  }
+]
+

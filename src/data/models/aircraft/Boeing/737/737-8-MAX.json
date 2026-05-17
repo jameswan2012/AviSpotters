@@ -1,0 +1,31 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "737",
+  "modelId": "737-8-MAX",
+  "name": "737-8 (MAX)",
+  "introduced": 2017,
+  "productionStatus": "in-service",
+  "firstFlight": "2016-01-29",
+  "summary": "737 MAX 系列主力型號，採用新一代引擎與翼尖設計提升燃油效率。",
+  "passengerCapacity": { "typical": 162, "max": 210 },
+  "rangeKm": 6570,
+  "cruiseSpeedKmh": 839,
+  "mtowKg": 82191,
+  "engines": ["CFM LEAP-1B"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12F/150Y" }],
+  "majorOperators": ["United Airlines", "Alaska Airlines"],
+  "accidents": [
+    {
+      "date": "2018-10-29",
+      "summary": "相關重大事件與機隊停飛（此處僅示例佔位，請以權威來源補齊）。",
+      "link": "https://en.wikipedia.org/wiki/Boeing_737_MAX"
+    }
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Boeing_737_MAX_8_%28N8702J%29.jpg/1280px-Boeing_737_MAX_8_%28N8702J%29.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_737_MAX",
+  "slug": "Boeing-737-8-MAX",
+  "keywords": ["737 MAX 8", "737-8", "737-8 MAX", "B38M", "Boeing 737 MAX 8", "737-8-MAX"]
+}
+

@@ -1,0 +1,30 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A320",
+  "modelId": "A320-200",
+  "name": "A320-200",
+  "introduced": 1988,
+  "productionStatus": "in-service",
+  "firstFlight": "1987-02-22",
+  "summary": "A320-200 為 A320 家族的核心型號之一，廣泛服務於全球短中程航線，並衍生多種客艙與性能配置。",
+  "passengerCapacity": { "typical": 150, "max": 180 },
+  "rangeKm": 6150,
+  "cruiseSpeedKmh": 828,
+  "mtowKg": 78000,
+  "engines": ["CFM56-5B", "IAE V2500 (variants)"],
+  "layouts": [
+    { "name": "Typical 2-class", "seats": "12J/138Y" },
+    { "name": "High density", "seats": "180Y" }
+  ],
+  "majorOperators": ["easyJet", "Lufthansa", "Air China", "United Airlines (A320 family operators)"],
+  "manufacturersNotes": "A320-200 在不同最大起飛重量與航程選項下，覆蓋廣泛市場；其 fly-by-wire 與側桿操縱為系列重要特徵。",
+  "buyingCustomers": [{ "airline": "easyJet", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Airbus_A320-214_Lufthansa_D-AIUA.jpg/1280px-Airbus_A320-214_Lufthansa_D-AIUA.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/EasyJet_Airbus_A320_G-EZTN.jpg/1280px-EasyJet_Airbus_A320_G-EZTN.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A320_family",
+  "slug": "Airbus-A320-200",
+  "keywords": ["A320-200", "A320", "A320-214", "A320-232", "Airbus A320-200", "A320 CEO"]
+}
+

@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "747",
+  "modelId": "747-8F",
+  "name": "747-8F",
+  "introduced": 2011,
+  "productionStatus": "in-service",
+  "firstFlight": "2010-02-08",
+  "summary": "747-8 貨機型號，延續 747 貨運平台並採用新一代引擎與翼型設計，常見於跨洲貨運航線。",
+  "passengerCapacity": { "typical": 0, "max": 0 },
+  "rangeKm": 8130,
+  "cruiseSpeedKmh": 908,
+  "mtowKg": 447696,
+  "engines": ["GEnx-2B"],
+  "layouts": [{ "name": "Freighter", "seats": "—" }],
+  "majorOperators": ["Cargolux", "Korean Air Cargo", "UPS (examples)"],
+  "manufacturersNotes": "747-8F 以大載重與前開式機鼻貨艙門等特性，成為部分重貨/超限貨運任務的主力平台。",
+  "buyingCustomers": [{ "airline": "Cargolux", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Cargolux_Boeing_747-8F_LX-VCE.jpg/1280px-Cargolux_Boeing_747-8F_LX-VCE.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Korean_Air_Cargo_Boeing_747-8F_HL7608.jpg/1280px-Korean_Air_Cargo_Boeing_747-8F_HL7608.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_747-8",
+  "slug": "Boeing-747-8F",
+  "keywords": ["747-8F", "B748F", "Boeing 747-8F", "747-8 Freighter"]
+}
+

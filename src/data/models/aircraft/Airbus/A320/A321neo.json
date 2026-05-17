@@ -1,0 +1,30 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A320",
+  "modelId": "A321neo",
+  "name": "A321neo",
+  "introduced": 2017,
+  "productionStatus": "in-service",
+  "firstFlight": "2016-02-09",
+  "summary": "A321neo 為 A320neo 家族加長型號，具較高載客量並提供長航程版本（LR/XLR）選項，常見於高密度與中程航線。",
+  "passengerCapacity": { "typical": 185, "max": 244 },
+  "rangeKm": 7400,
+  "cruiseSpeedKmh": 828,
+  "mtowKg": 97000,
+  "engines": ["CFM LEAP-1A", "Pratt & Whitney PW1100G-JM"],
+  "layouts": [
+    { "name": "Typical 2-class", "seats": "16J/169Y" },
+    { "name": "High density", "seats": "244Y" }
+  ],
+  "majorOperators": ["American Airlines", "Wizz Air", "Lufthansa", "JetBlue (A321 family)"],
+  "manufacturersNotes": "A321neo 系列常見翼尖改良與新引擎帶來的效率提升；LR/XLR 版本可拓展更長航段。",
+  "buyingCustomers": [{ "airline": "Wizz Air", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Airbus_A321neo_%28F-WWAB%29_Airbus_Industrie.jpg/1280px-Airbus_A321neo_%28F-WWAB%29_Airbus_Industrie.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Wizz_Air_Airbus_A321neo_HA-LJA.jpg/1280px-Wizz_Air_Airbus_A321neo_HA-LJA.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A320neo_family",
+  "slug": "Airbus-A321neo",
+  "keywords": ["A321neo", "A21N", "Airbus A321neo", "A321 NEO", "A321-271NX"]
+}
+

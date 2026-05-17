@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A220",
+  "modelId": "A220-100",
+  "name": "A220-100",
+  "introduced": 2016,
+  "productionStatus": "in-service",
+  "firstFlight": "2013-09-16",
+  "summary": "A220-100（原 CSeries CS100）為 A220 系列較短機身型號，適合薄航線與高頻短中程市場。",
+  "passengerCapacity": { "typical": 110, "max": 135 },
+  "rangeKm": 6297,
+  "cruiseSpeedKmh": 871,
+  "mtowKg": 63100,
+  "engines": ["Pratt & Whitney PW1500G"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12J/98Y" }],
+  "majorOperators": ["Swiss International Air Lines"],
+  "manufacturersNotes": "A220-100 在較小座級下提供相對長航程與舒適客艙寬度。",
+  "buyingCustomers": [{ "airline": "Swiss", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Airbus_A220-100_Swiss_HB-JBB.jpg/1280px-Airbus_A220-100_Swiss_HB-JBB.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Airbus_A220-100_%28CS100%29_Bombardier_C-FKBI.jpg/1280px-Airbus_A220-100_%28CS100%29_Bombardier_C-FKBI.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A220",
+  "slug": "Airbus-A220-100",
+  "keywords": ["A220-100", "A221", "CS100", "CSeries CS100", "BCS1", "Airbus A220-100"]
+}
+

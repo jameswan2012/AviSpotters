@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "777",
+  "modelId": "777F",
+  "name": "777F",
+  "introduced": 2009,
+  "productionStatus": "in-service",
+  "firstFlight": "2008-09-14",
+  "summary": "777F 為長程雙發貨機平台，以高載重與航程在洲際貨運市場佔有一席之地。",
+  "passengerCapacity": { "typical": 0, "max": 0 },
+  "rangeKm": 9070,
+  "cruiseSpeedKmh": 905,
+  "mtowKg": 347450,
+  "engines": ["GE90-110B/115B (variants)"],
+  "layouts": [{ "name": "Freighter", "seats": "—" }],
+  "majorOperators": ["FedEx Express", "Qatar Airways Cargo", "Emirates SkyCargo (examples)"],
+  "manufacturersNotes": "777F 常作為 747F 以外的大載重貨運平台選擇，具效率與運力兼顧特性。",
+  "buyingCustomers": [{ "airline": "Qatar Airways Cargo", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Qatar_Airways_Cargo_Boeing_777F_A7-BFA.jpg/1280px-Qatar_Airways_Cargo_Boeing_777F_A7-BFA.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/FedEx_Boeing_777F_N878FD.jpg/1280px-FedEx_Boeing_777F_N878FD.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_777F",
+  "slug": "Boeing-777F",
+  "keywords": ["777F", "B77F", "Boeing 777F", "777 Freighter"]
+}
+

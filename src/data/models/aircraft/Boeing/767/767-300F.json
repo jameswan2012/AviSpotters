@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "767",
+  "modelId": "767-300F",
+  "name": "767-300F",
+  "introduced": 1995,
+  "productionStatus": "in-service",
+  "firstFlight": "1995-06-20",
+  "summary": "767-300F 為中型貨機平台，常見於區域/跨洲貨運航線，並有多種改裝貨機方案。",
+  "passengerCapacity": { "typical": 0, "max": 0 },
+  "rangeKm": 6025,
+  "cruiseSpeedKmh": 851,
+  "mtowKg": 186880,
+  "engines": ["GE CF6-80C2", "Pratt & Whitney PW4000", "Rolls-Royce RB211 (variants)"],
+  "layouts": [{ "name": "Freighter", "seats": "—" }],
+  "majorOperators": ["FedEx Express", "UPS Airlines"],
+  "manufacturersNotes": "767F 以貨艙容積與效率取得平衡，常作為 757F 與更大型 777F 之間的級距選擇。",
+  "buyingCustomers": [{ "airline": "FedEx", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/FedEx_Boeing_767-300F_N121FE.jpg/1280px-FedEx_Boeing_767-300F_N121FE.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/UPS_Airlines_Boeing_767-300F_N361UP.jpg/1280px-UPS_Airlines_Boeing_767-300F_N361UP.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_767",
+  "slug": "Boeing-767-300F",
+  "keywords": ["767-300F", "B763F", "Boeing 767-300F", "767 Freighter"]
+}
+

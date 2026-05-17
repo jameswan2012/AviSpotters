@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "757",
+  "modelId": "757-200",
+  "name": "757-200",
+  "introduced": 1983,
+  "productionStatus": "out-of-production",
+  "firstFlight": "1982-02-19",
+  "summary": "757-200 為高性能窄體中程客機，曾廣泛服務於國內幹線與部分跨洲短程/中程航線。",
+  "passengerCapacity": { "typical": 200, "max": 239 },
+  "rangeKm": 7222,
+  "cruiseSpeedKmh": 850,
+  "mtowKg": 115680,
+  "engines": ["Rolls-Royce RB211-535", "Pratt & Whitney PW2000 (variants)"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "16F/184Y" }],
+  "majorOperators": ["Delta Air Lines", "United Airlines (historical)", "Icelandair"],
+  "manufacturersNotes": "757 常被用於需要較佳起降性能、較長航程或高載重需求的窄體航線。",
+  "buyingCustomers": [{ "airline": "Delta Air Lines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Delta_Air_Lines_Boeing_757-200_N6715C.jpg/1280px-Delta_Air_Lines_Boeing_757-200_N6715C.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Icelandair_Boeing_757-200_TF-FIO.jpg/1280px-Icelandair_Boeing_757-200_TF-FIO.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_757",
+  "slug": "Boeing-757-200",
+  "keywords": ["757-200", "B752", "Boeing 757-200", "757"]
+}
+

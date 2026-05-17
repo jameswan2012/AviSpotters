@@ -1,0 +1,17 @@
+[
+  {
+    "manufacturerId": "Antonov",
+    "familyId": "An-124",
+    "name": "An-124",
+    "description": "大型貨運/運輸機系列（含 An-124-100 等民用貨運版本）。",
+    "models": ["An-124-100"]
+  },
+  {
+    "manufacturerId": "Antonov",
+    "familyId": "An-225",
+    "name": "An-225",
+    "description": "超大型運輸機（單一原型/量產極少）。",
+    "models": ["An-225"]
+  }
+]
+

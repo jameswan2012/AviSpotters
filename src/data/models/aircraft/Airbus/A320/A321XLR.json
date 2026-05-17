@@ -1,0 +1,23 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A320",
+  "modelId": "A321XLR",
+  "name": "A321XLR",
+  "productionStatus": "planned",
+  "summary": "A321XLR 為 A321neo 衍生的超遠程版本，透過額外燃油/結構配置提升航程，瞄準更長航段的單通道市場。",
+  "passengerCapacity": { "typical": 180, "max": 244 },
+  "rangeKm": 8700,
+  "cruiseSpeedKmh": 828,
+  "mtowKg": 101000,
+  "engines": ["CFM LEAP-1A", "Pratt & Whitney PW1100G-JM"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "14J/166Y" }],
+  "majorOperators": [],
+  "manufacturersNotes": "XLR 版本的實際營運性能與交付節奏以官方與航司導入資訊為準。",
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Airbus_A321XLR_%28concept%29.jpg/1280px-Airbus_A321XLR_%28concept%29.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A321XLR",
+  "slug": "Airbus-A321XLR",
+  "keywords": ["A321XLR", "A321 XLR", "Airbus A321XLR", "XLR"]
+}
+

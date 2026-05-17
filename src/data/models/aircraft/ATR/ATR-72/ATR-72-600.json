@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "ATR",
+  "familyId": "ATR-72",
+  "modelId": "ATR-72-600",
+  "name": "ATR 72-600",
+  "introduced": 2011,
+  "productionStatus": "in-service",
+  "firstFlight": "2009-07-15",
+  "summary": "ATR 72-600 為渦槳支線客機主力型號之一，常用於短程與支線航線，兼具效率與較低場站需求。",
+  "passengerCapacity": { "typical": 68, "max": 78 },
+  "rangeKm": 1528,
+  "cruiseSpeedKmh": 510,
+  "mtowKg": 23000,
+  "engines": ["Pratt & Whitney Canada PW127M"],
+  "layouts": [{ "name": "Typical single-class", "seats": "72Y" }],
+  "majorOperators": ["ANA", "Air New Zealand (regional)", "ITA Airways (regional)"],
+  "manufacturersNotes": "ATR 72 系列在短程支線市場常見，尤其適合中小機場與高頻次航段。",
+  "buyingCustomers": [{ "airline": "ANA", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/ATR_72-600_%28F-WWEY%29.jpg/1280px-ATR_72-600_%28F-WWEY%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/ANA_Wings_ATR_72-600_JA09AN.jpg/1280px-ANA_Wings_ATR_72-600_JA09AN.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/ATR_72",
+  "slug": "ATR-72-600",
+  "keywords": ["ATR 72-600", "ATR72-600", "AT76", "ATR72", "ATR 72"]
+}
+

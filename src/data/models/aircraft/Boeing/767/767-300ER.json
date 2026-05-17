@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "767",
+  "modelId": "767-300ER",
+  "name": "767-300ER",
+  "introduced": 1988,
+  "productionStatus": "in-service",
+  "firstFlight": "1986-11-09",
+  "summary": "767-300ER 為延程寬體雙發客機，常見於中長程航線與部分跨洋航線，也常被改裝為貨機。",
+  "passengerCapacity": { "typical": 218, "max": 350 },
+  "rangeKm": 11070,
+  "cruiseSpeedKmh": 851,
+  "mtowKg": 186880,
+  "engines": ["GE CF6-80C2", "Pratt & Whitney PW4000", "Rolls-Royce RB211 (variants)"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "30J/188Y" }],
+  "majorOperators": ["Delta Air Lines", "United Airlines", "ANA"],
+  "manufacturersNotes": "767-300ER 在 ETOPS 與雙發長程營運成熟後成為多家航司的長程主力之一。",
+  "buyingCustomers": [{ "airline": "ANA", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/ANA_Boeing_767-300ER_JA602A.jpg/1280px-ANA_Boeing_767-300ER_JA602A.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Delta_Air_Lines_Boeing_767-300ER_N1612T.jpg/1280px-Delta_Air_Lines_Boeing_767-300ER_N1612T.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_767",
+  "slug": "Boeing-767-300ER",
+  "keywords": ["767-300ER", "B763", "Boeing 767-300ER", "767 ER"]
+}
+

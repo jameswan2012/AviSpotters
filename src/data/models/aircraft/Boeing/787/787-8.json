@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "787",
+  "modelId": "787-8",
+  "name": "787-8",
+  "introduced": 2011,
+  "productionStatus": "in-service",
+  "firstFlight": "2009-12-15",
+  "summary": "787 Dreamliner 家族首個投產型號，主打燃油效率與中長程航線彈性，常用於開闢新航點或替換舊型寬體。",
+  "passengerCapacity": { "typical": 242, "max": 359 },
+  "rangeKm": 13620,
+  "cruiseSpeedKmh": 903,
+  "mtowKg": 227930,
+  "engines": ["GEnx-1B", "Rolls-Royce Trent 1000"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "24J/218Y" }],
+  "majorOperators": ["ANA", "United Airlines", "Japan Airlines"],
+  "manufacturersNotes": "787-8 以較小機身尺寸提供長航程能力，適合中等需求的長程航線。",
+  "buyingCustomers": [{ "airline": "ANA", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/All_Nippon_Airways_Boeing_787-8_JA801A.jpg/1280px-All_Nippon_Airways_Boeing_787-8_JA801A.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/United_Airlines_Boeing_787-8_N26910.jpg/1280px-United_Airlines_Boeing_787-8_N26910.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_787_Dreamliner",
+  "slug": "Boeing-787-8",
+  "keywords": ["787-8", "B788", "Boeing 787-8", "787 Dreamliner"]
+}
+

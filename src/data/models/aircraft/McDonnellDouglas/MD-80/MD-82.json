@@ -1,0 +1,34 @@
+{
+  "manufacturerId": "McDonnellDouglas",
+  "familyId": "MD-80",
+  "modelId": "MD-82",
+  "name": "MD-82",
+  "introduced": 1981,
+  "productionStatus": "out-of-production",
+  "firstFlight": "1979-10-24",
+  "summary": "MD-82 為 MD-80 系列常見型號之一，曾廣泛服務於短中程航線，現多已退役或轉由少數營運方使用。",
+  "passengerCapacity": { "typical": 155, "max": 172 },
+  "rangeKm": 3800,
+  "cruiseSpeedKmh": 840,
+  "mtowKg": 67400,
+  "engines": ["Pratt & Whitney JT8D-217/219"],
+  "layouts": [{ "name": "Typical single/2-class", "seats": "155Y" }],
+  "majorOperators": ["American Airlines (historical)", "Delta Air Lines (historical)"],
+  "manufacturersNotes": "MD-80 系列以 T 型尾翼與機尾雙發配置辨識度高，曾是多家航司主力窄體機。",
+  "buyingCustomers": [{ "airline": "American Airlines", "orders": null }],
+  "accidents": [
+    {
+      "date": "1987-08-16",
+      "summary": "部分事故/事件多與營運環境與程序相關（此處為示例佔位）。",
+      "link": "https://en.wikipedia.org/wiki/McDonnell_Douglas_MD-80"
+    }
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/McDonnell_Douglas_MD-82_American_Airlines_N476AA.jpg/1280px-McDonnell_Douglas_MD-82_American_Airlines_N476AA.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/McDonnell_Douglas_MD-82_Delta_Air_Lines_N954DL.jpg/1280px-McDonnell_Douglas_MD-82_Delta_Air_Lines_N954DL.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/McDonnell_Douglas_MD-80",
+  "slug": "McDonnellDouglas-MD-82",
+  "keywords": ["MD-82", "MD82", "McDonnell Douglas MD-82", "MD-80", "M80"]
+}
+

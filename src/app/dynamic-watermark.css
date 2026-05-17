@@ -1,0 +1,9 @@
+@keyframes avispotters-wm-slide {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1400px 0;
+  }
+}
+

@@ -1,0 +1,30 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A350",
+  "modelId": "A350-900",
+  "name": "A350-900",
+  "introduced": 2015,
+  "productionStatus": "in-service",
+  "firstFlight": "2013-06-14",
+  "summary": "A350-900 為新世代長程寬體客機，採用大量複合材料與新一代引擎，適合中長程/超長程航線。",
+  "passengerCapacity": { "typical": 315, "max": 440 },
+  "rangeKm": 15000,
+  "cruiseSpeedKmh": 903,
+  "mtowKg": 280000,
+  "engines": ["Rolls-Royce Trent XWB"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "36J/24W/255Y" }],
+  "majorOperators": ["Singapore Airlines", "Qatar Airways", "Cathay Pacific"],
+  "manufacturersNotes": "A350 系列以高效率與長航程著稱，客艙濕度/氣壓等舒適性設計也常被提及。",
+  "buyingCustomers": [
+    { "airline": "Singapore Airlines", "orders": null },
+    { "airline": "Qatar Airways", "orders": null }
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Airbus_A350-941_XWB_F-WWCF_MSFS.jpg/1280px-Airbus_A350-941_XWB_F-WWCF_MSFS.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Qatar_Airways_Airbus_A350-900_A7-ALB.jpg/1280px-Qatar_Airways_Airbus_A350-900_A7-ALB.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A350",
+  "slug": "Airbus-A350-900",
+  "keywords": ["A350-900", "A359", "Airbus A350-900", "A350"]
+}
+

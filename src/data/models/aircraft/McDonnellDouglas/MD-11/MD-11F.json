@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "McDonnellDouglas",
+  "familyId": "MD-11",
+  "modelId": "MD-11F",
+  "name": "MD-11F",
+  "introduced": 1991,
+  "productionStatus": "out-of-production",
+  "firstFlight": "1990-04-18",
+  "summary": "MD-11F 為三發寬體貨機衍生型，現多見於貨運航空公司長程/跨洋貨運航線。",
+  "passengerCapacity": { "typical": 0, "max": 0 },
+  "rangeKm": 6700,
+  "cruiseSpeedKmh": 876,
+  "mtowKg": 286000,
+  "engines": ["GE CF6-80C2", "Pratt & Whitney PW4000", "Rolls-Royce RB211 (variants)"],
+  "layouts": [{ "name": "Freighter", "seats": "—" }],
+  "majorOperators": ["FedEx Express", "UPS Airlines"],
+  "manufacturersNotes": "MD-11 以三發與高載重能力著稱；客機版本多已退役，貨機仍在部分貨運機隊服役。",
+  "buyingCustomers": [{ "airline": "FedEx", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/FedEx_MD-11F_N591FE.jpg/1280px-FedEx_MD-11F_N591FE.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/UPS_Airlines_MD-11F_N274UP.jpg/1280px-UPS_Airlines_MD-11F_N274UP.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/McDonnell_Douglas_MD-11",
+  "slug": "McDonnellDouglas-MD-11F",
+  "keywords": ["MD-11F", "MD11F", "MD-11", "McDonnell Douglas MD-11", "MD11"]
+}
+

@@ -1,0 +1,26 @@
+{
+  "manufacturerId": "Antonov",
+  "familyId": "An-225",
+  "modelId": "An-225",
+  "name": "An-225",
+  "introduced": 1988,
+  "productionStatus": "prototype",
+  "firstFlight": "1988-12-21",
+  "summary": "An-225 為超大型運輸機（單一原型最知名），曾用於超限貨運與特種任務，具極高辨識度。",
+  "passengerCapacity": { "typical": 0, "max": 0 },
+  "rangeKm": 4000,
+  "cruiseSpeedKmh": 800,
+  "mtowKg": 640000,
+  "engines": ["Progress D-18T (x6)"],
+  "layouts": [{ "name": "Freighter", "seats": "—" }],
+  "majorOperators": ["Antonov Airlines (historical/operations)"],
+  "manufacturersNotes": "An-225 多作為工程/運輸史上的代表機型之一，相關細節請以權威來源補齊。",
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Antonov_An-225_Mriya_at_Farnborough_2010.jpg/1280px-Antonov_An-225_Mriya_at_Farnborough_2010.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Antonov_An-225_Mriya_UR-82060.jpg/1280px-Antonov_An-225_Mriya_UR-82060.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Antonov_An-225_Mriya",
+  "slug": "Antonov-An-225",
+  "keywords": ["An-225", "Antonov An-225", "Mriya", "Мрия"]
+}
+

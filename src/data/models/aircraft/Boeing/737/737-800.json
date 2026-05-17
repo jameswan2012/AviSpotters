@@ -1,0 +1,42 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "737",
+  "modelId": "737-800",
+  "name": "737-800",
+  "introduced": 1997,
+  "productionStatus": "in-service",
+  "firstFlight": "1997-07-31",
+  "summary": "737 Next Generation 系列中的主力型號之一，常見於低成本與傳統航空公司短中程航線。",
+  "passengerCapacity": { "typical": 162, "max": 189 },
+  "rangeKm": 5430,
+  "cruiseSpeedKmh": 842,
+  "mtowKg": 79015,
+  "engines": ["CFM56-7B"],
+  "layouts": [
+    { "name": "Typical 2-class", "seats": "12F/150Y" },
+    { "name": "High density", "seats": "189Y" }
+  ],
+  "majorOperators": ["Ryanair", "American Airlines", "United Airlines", "Southwest Airlines"],
+  "manufacturersNotes": "737-800 為 NG 系列最廣泛交付型號之一，衍生出多種客艙/航程配置。（訂單/交付數可後續補齊權威來源）",
+  "buyingCustomers": [
+    { "airline": "Ryanair", "orders": null },
+    { "airline": "American Airlines", "orders": null }
+  ],
+  "accidents": [
+    {
+      "date": "2010-04-13",
+      "summary": "部分事故/事件多與營運環境、天候與程序相關（此處為示例佔位）。",
+      "link": "https://en.wikipedia.org/wiki/Boeing_737_Next_Generation"
+    }
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Boeing_737-800_%28WL%29_TUIfly_D-ATUC.jpg/1280px-Boeing_737-800_%28WL%29_TUIfly_D-ATUC.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Boeing_737-800_China_Southern_B-5173.jpg/1280px-Boeing_737-800_China_Southern_B-5173.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Boeing_737-800_S7_Airlines_VQ-BBM.jpg/1280px-Boeing_737-800_S7_Airlines_VQ-BBM.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_737_Next_Generation",
+  "officialUrl": "https://www.boeing.com/commercial/737ng/",
+  "slug": "Boeing-737-800",
+  "keywords": ["737-800", "B737-800", "B738", "737 NG", "Boeing 737-800"]
+}
+

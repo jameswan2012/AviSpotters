@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Embraer",
+  "familyId": "E-Jets",
+  "modelId": "E190",
+  "name": "E190",
+  "introduced": 2005,
+  "productionStatus": "in-service",
+  "firstFlight": "2004-03-12",
+  "summary": "E190 介於支線與窄體客機之間的座級，常用於區域與中短程市場，具備較好的航線彈性。",
+  "passengerCapacity": { "typical": 98, "max": 114 },
+  "rangeKm": 4500,
+  "cruiseSpeedKmh": 828,
+  "mtowKg": 51800,
+  "engines": ["GE CF34-10E"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "10J/88Y" }],
+  "majorOperators": ["KLM Cityhopper", "Air Canada Express", "Azul"],
+  "manufacturersNotes": "E190 的 2-2 座位配置與較低營運成本，使其在中小市場具競爭力。",
+  "buyingCustomers": [{ "airline": "KLM Cityhopper", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/KLM_Cityhopper_Embraer_190_PH-EZX.jpg/1280px-KLM_Cityhopper_Embraer_190_PH-EZX.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Azul_Linhas_Aereas_Embraer_190_PR-AUB.jpg/1280px-Azul_Linhas_Aereas_Embraer_190_PR-AUB.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Embraer_E-Jet_family",
+  "slug": "Embraer-E190",
+  "keywords": ["E190", "E-190", "Embraer 190", "E90", "E190AR"]
+}
+

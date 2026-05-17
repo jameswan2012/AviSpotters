@@ -1,0 +1,26 @@
+{
+  "manufacturerId": "Antonov",
+  "familyId": "An-124",
+  "modelId": "An-124-100",
+  "name": "An-124-100",
+  "introduced": 1986,
+  "productionStatus": "out-of-production",
+  "firstFlight": "1982-12-24",
+  "summary": "An-124 為大型貨運/運輸機平台，An-124-100 為常見民用貨運版本之一，常用於超限貨運與特殊任務。",
+  "passengerCapacity": { "typical": 0, "max": 0 },
+  "rangeKm": 4800,
+  "cruiseSpeedKmh": 800,
+  "mtowKg": 405000,
+  "engines": ["Progress D-18T"],
+  "layouts": [{ "name": "Freighter", "seats": "—" }],
+  "majorOperators": ["Antonov Airlines", "Volga-Dnepr (historical/operations)"],
+  "manufacturersNotes": "An-124 具有前後貨艙門與高載重能力，常見於超限貨物（大型設備、工程件）空運任務。",
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Antonov_An-124-100_Ruslan_UR-82027.jpg/1280px-Antonov_An-124-100_Ruslan_UR-82027.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Antonov_An-124_UR-82009.jpg/1280px-Antonov_An-124_UR-82009.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Antonov_An-124_Ruslan",
+  "slug": "Antonov-An-124-100",
+  "keywords": ["An-124", "An-124-100", "Antonov An-124", "Ruslan"]
+}
+

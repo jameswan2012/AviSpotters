@@ -16,10 +16,10 @@
 
 <br/>
 
-<img src="https://img.shields.io/badge/Repository-Private-111827?style=for-the-badge" />
-<img src="https://img.shields.io/badge/License-Proprietary-E11D48?style=for-the-badge" />
+<img src="https://img.shields.io/badge/License-Apache--2.0-3DA639?style=for-the-badge" />
 <img src="https://img.shields.io/badge/Owner-Jameswan-0EA5E9?style=for-the-badge" />
 <img src="https://img.shields.io/badge/UI-iOS26%20Aurora-22C55E?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Theme-Light%20%2F%20Dark-A78BFA?style=for-the-badge" />
 
 <br/>
 
@@ -35,33 +35,18 @@
 <br/>
 
 <img src="https://img.shields.io/badge/I18N-zh--Hans%20%7C%20zh--Hant%20%7C%20en-0EA5E9?style=for-the-badge" />
-<img src="https://img.shields.io/badge/Theme-Light%20%2F%20Dark-A78BFA?style=for-the-badge" />
 <img alt="Views" src="https://komarev.com/ghpvc/?username=Jameswan&label=Views&color=0ea5e9&style=flat" />
 
 <br/><br/>
 
-> **闭源声明（强制）**  
-> 本仓库为 **Jameswan 私有闭源项目**。未经书面授权：禁止复制、分发、公开发布、再授权、改造后发布、商业或非商业使用。  
-> 详细条款见根目录 `LICENSE`。
+> 本仓库用于上传“源码镜像”，会刻意缺失生产数据与敏感内容（例如 `.env`、`uploads/`、`var/`、本地数据库文件等）。  
+> 若需要完整部署，请使用服务器内网版本与受控配置。
 
 </div>
 
 ---
 
-## ✦ 导航
-- [🌌 网站定位](#-网站定位)
-- [🧱 技术架构（Tech Stack）](#-技术架构tech-stack)
-- [🖼️ 主站内容（航空摄影社区）](#️-主站内容航空摄影社区)
-- [🎫 Ticket 子站（奖励机票/积分票）](#-ticket-子站奖励机票积分票)
-- [🧊 iOS26 Aurora UI（体验取向）](#-ios26-aurora-ui体验取向)
-- [🧩 结构概览（读代码地图）](#-结构概览读代码地图)
-- [🖼️ 展示位（截图/动图）](#️-展示位截图动图)
-- [🔒 闭源许可](#-闭源许可)
-- [☎️ 联系](#️-联系)
-
----
-
-## 🌌 网站定位
+## ✦ 网站定位
 
 AviSpotters / FlightBox 是一个“内容与工具共生”的网站系统：
 
@@ -73,53 +58,46 @@ AviSpotters / FlightBox 是一个“内容与工具共生”的网站系统：
 
 ## 🧱 技术架构（Tech Stack）
 
-> 说明网站“语言/框架/数据库/部署形态”，不包含本地开发步骤。
-
 ### 运行与框架
-- **Runtime**: Node.js
-- **Web Framework**: Next.js（App Router）
-- **Language**: TypeScript
-- **UI**: TailwindCSS（iOS26 Aurora / Glassmorphism 风格组件体系）
+- **Runtime**：Node.js
+- **Web Framework**：Next.js（App Router）
+- **Language**：TypeScript
+- **UI**：React + TailwindCSS（iOS26 Aurora / Glassmorphism 风格）
 
 ### 数据与存储
-- **Database**: PostgreSQL
-- **ORM**: Prisma（应用侧通过 Prisma Client 访问数据库）
+- **Database**：PostgreSQL
+- **ORM**：Prisma（通过 Prisma Client 访问数据库）
 
 ### 部署形态（典型）
-- **OS**: Linux
-- **Reverse Proxy**: Nginx（TLS/HTTP2、静态资源缓存、反向代理到 Node 服务）
-- **Process**: Next.js 服务进程（可由 systemd / pm2 等守护）
+- **OS**：Linux
+- **Reverse Proxy**：Nginx（TLS/HTTP2、静态资源缓存、反向代理到 Node 服务）
 
 ### 国际化与主题
-- **I18N**: zh-Hans / zh-Hant / en
-- **Theme**: Light / Dark
+- **I18N**：zh-Hans / zh-Hant / en
+- **Theme**：Light / Dark
 
 ---
 
 ## 🖼️ 主站内容（航空摄影社区）
 
-### 1) 内容组织：从“照片”走向“可探索的内容网络”
-主站不是单纯相册，而是把照片放进一张“可探索的地图”里：
+### 内容组织：从“照片”走向“可探索的内容网络”
+- **机场聚合**：以机场为入口观察不同时间/机型/航司内容分布
+- **航司聚合**：以航司为入口形成内容目录与机队视角
+- **制造商 → 机族 → 机型**：层级化浏览路径
+- **注册号（机尾号）**：以“某一架飞机”为中心串联历史作品与记录
 
-- **机场聚合**：以机场为入口观察不同时间/机型/航司内容分布  
-- **航司聚合**：以航司为入口形成内容目录与机队视角  
-- **制造商 → 机族 → 机型**：层级化浏览路径  
-- **注册号（机尾号）**：以“某一架飞机”为中心串联历史作品与记录  
+### 创作者工作流：提交到展示的完整链路
+- 上传与信息结构化：提升检索与展示质量
+- 元数据处理（EXIF/文件信息）：辅助归档与校验
+- 审核流程（通过/拒绝/复审）：保证站点标准与一致性
+- 历史追踪：可回溯作品生命周期
 
-> 目标是：让内容既能“刷”，也能“找”，还能“研究”。
-
-### 2) 创作者工作流：提交到展示的完整链路
-- 上传与信息结构化，提升检索与展示质量  
-- 元数据处理（如 EXIF/文件信息）辅助归档与校验  
-- 审核流程（通过/拒绝/复审）保证站点标准与一致性  
-- 历史追踪与回溯，便于管理作品生命周期  
-
-### 3) 社区治理：质量与秩序的引擎
-- 审核后台：队列处理、历史、复审  
-- 申诉与沟通：对争议提供复核通道  
-- 举报/事件处理：对违规内容与行为做闭环处理  
-- 封禁与限制：账号/身份/IP 等维度策略化控制  
-- 站点配置：维护模式、公告、站点资源与运营入口  
+### 社区治理与后台能力
+- 审核后台：队列处理、历史、复审
+- 申诉与沟通：对争议提供复核通道
+- 举报/事件处理：对违规内容与行为做闭环处理
+- 封禁与限制：账号/身份/IP 等维度策略化控制
+- 站点配置：维护模式、公告、站点资源与运营入口
 
 ---
 
@@ -127,34 +105,24 @@ AviSpotters / FlightBox 是一个“内容与工具共生”的网站系统：
 
 Ticket 子站强调“像 OTA 一样的信息结构”，同时补齐兑换玩家真正需要的“估值能力”。
 
-### 1) 奖励机票搜索（Award / Miles）
-- 多条件组合：出发/到达、日期、舱位、经停、计划筛选等  
-- 结果卡片化：路线、航段、直飞/经停、点数、税费、更新时间、跳转链接  
-- 信息目标：让用户快速判断“哪个更划算 / 更合适”  
+### 奖励机票搜索（Award / Miles）
+- 多条件组合：出发/到达、日期、舱位、经停、计划筛选等
+- 结果卡片化：路线、航段、直飞/经停、点数、税费、更新时间、跳转链接
+- 信息目标：让用户快速判断“哪个更划算 / 更合适”
 
-### 2) 税费换算与综合成本估算（可决策）
-- 税费换算到统一视角便于横向对比  
-- 用户可设置自己的点值成本（Point Valuation）  
-- 展示综合成本（里程估值 + 税费）帮助判断兑换价值  
+### 税费换算与综合成本估算（可决策）
+- 税费换算到统一视角便于横向对比
+- 用户可设置自己的点值成本（Point Valuation）
+- 展示综合成本（里程估值 + 税费）帮助判断兑换价值
 
-### 3) 权限与 Beta 管控
-- 支持公开/登录/批准用户等访问策略  
-- 超级管理员开关：控制可用性与 provider 状态  
-- 便于灰度开放与稳定性管理  
+### 权限与 Beta 管控
+- 支持公开/登录/批准用户等访问策略
+- 管理员开关：控制可用性与 provider 状态
+- 便于灰度开放与稳定性管理
 
-### 4) 普通票价入口（规划）
-- 预留 Cash Fare 入口与 provider 形态  
-- 当前阶段保留产品路径与结构，后续再接入真实查询  
-
----
-
-## 🧊 iOS26 Aurora UI（体验取向）
-
-这一套 UI 风格以 “iOS26 Glass + Aurora” 为核心：  
-- **玻璃拟态**：高透玻璃面板、柔和高光、细边框  
-- **极光背景**：多层渐变/光斑叠加，营造夜空与霓虹质感  
-- **信息层级**：让复杂信息（例如奖励票结果）更好读、更好比  
-- **交互节奏**：微位移、柔和阴影、圆角与统一的点击反馈  
+### 普通票价入口（规划）
+- 预留 Cash Fare 入口与 provider 形态
+- 当前阶段保留产品路径与结构，后续再接入真实查询
 
 ---
 
@@ -189,14 +157,76 @@ _（放截图链接）_
 
 ---
 
-## 🔒 闭源许可
+## 📜 License
 
-本仓库为 **私有闭源（Proprietary / Closed Source）**。  
-未经 **Jameswan** 书面授权：禁止使用、复制、分发、公开、改造或再发布。  
-详见根目录 `LICENSE`。
+Apache License 2.0 — see `LICENSE`.
+node ./node_modules/next/dist/bin/next start -p 3000
+```
 
 ---
 
-## ☎️ 联系
+## 專案結構（簡要）
 
-- Owner / Maintainer: **Jameswan**
+```
+FlightBox/
+├── src/
+│   ├── app/              # 頁面與 API 路由（App Router）
+│   ├── components/       # React 元件
+│   ├── lib/              # 業務邏輯、工具、Prisma 客戶端
+│   └── i18n/             # 多語言
+├── prisma/               # Schema 與遷移（若存在）
+├── public/               # 靜態資源
+└── package.json
+```
+
+主要路由示例：
+
+| 路徑 | 說明 |
+|------|------|
+| `/` | 首頁 |
+| `/gallery` | 圖庫 |
+| `/photos/upload` | 上傳照片 |
+| `/admin` | 管理後台 |
+| `/shop` | 積分商城 |
+| `/lottery` | 抽獎中心 |
+| `/points` | 積分帳本 |
+| `/video` | 影片專區 |
+
+---
+
+## 部署提示
+
+1. 設定 `APP_URL` / `NEXT_PUBLIC_APP_URL` 為正式域名（含 `https`）。
+2. 配置 Nginx 反向代理至 Node 進程（預設埠 `3000`）。
+3. 上傳目錄需可寫，並建議定期備份。
+4. 定時任務可透過 cron 呼叫 `/api/cron/*`（需 `CRON_TOKEN`）。
+5. 若使用子網域（例如 `ticket.*`），需在反向代理與 middleware 中一併配置。
+
+---
+
+## 授權
+
+本專案原始碼依 [MIT License](./LICENSE) 發布。
+
+**使用者上傳的照片與其他 UGC 內容** 之版權歸原作者所有，與本儲存庫的程式授權無關。對外營運時請另行制定服務條款與內容授權政策。
+
+---
+
+## 貢獻
+
+歡迎透過 Issue / Pull Request 參與。提交前請確保：
+
+- 通過 `npm run build`
+- 不提交密鑰、`.env` 或使用者資料
+- 變更說明清楚、範圍聚焦
+
+---
+
+## 聯絡
+
+- 網站：[https://www.avispotters.net](https://www.avispotters.net)
+- 問題回報：請使用 GitHub Issues
+
+---
+
+<sub>FlightBox 為 Avispotters 網站之後端與前台程式碼庫名稱。</sub>

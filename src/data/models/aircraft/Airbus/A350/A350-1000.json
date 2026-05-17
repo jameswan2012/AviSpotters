@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A350",
+  "modelId": "A350-1000",
+  "name": "A350-1000",
+  "introduced": 2018,
+  "productionStatus": "in-service",
+  "firstFlight": "2016-11-24",
+  "summary": "A350-1000 為 A350 系列加長型號，具更高載客量與載重能力，常用於長程與高需求樞紐航線。",
+  "passengerCapacity": { "typical": 369, "max": 480 },
+  "rangeKm": 16100,
+  "cruiseSpeedKmh": 903,
+  "mtowKg": 319000,
+  "engines": ["Rolls-Royce Trent XWB-97"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "36J/24W/309Y" }],
+  "majorOperators": ["Qatar Airways", "British Airways", "Cathay Pacific"],
+  "manufacturersNotes": "A350-1000 透過加長機身與更大推力引擎提升運能，適合高載客與長航段。",
+  "buyingCustomers": [{ "airline": "Qatar Airways", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Airbus_A350-1041_XWB_F-WZNG.jpg/1280px-Airbus_A350-1041_XWB_F-WZNG.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/British_Airways_Airbus_A350-1000_G-XWBA.jpg/1280px-British_Airways_Airbus_A350-1000_G-XWBA.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A350",
+  "slug": "Airbus-A350-1000",
+  "keywords": ["A350-1000", "A35K", "Airbus A350-1000", "A350-1041"]
+}
+

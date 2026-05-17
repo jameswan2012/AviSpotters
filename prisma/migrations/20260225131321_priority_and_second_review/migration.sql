@@ -1,0 +1,82 @@
+-- RedefineTables
+PRAGMA defer_foreign_keys=ON;
+PRAGMA foreign_keys=OFF;
+CREATE TABLE "new_Photo" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "userId" TEXT NOT NULL,
+    "status" TEXT NOT NULL DEFAULT 'pending',
+    "assignedReviewerId" TEXT,
+    "priority" INTEGER NOT NULL DEFAULT 0,
+    "registration" TEXT NOT NULL,
+    "shotAirport" TEXT NOT NULL,
+    "aircraftModel" TEXT NOT NULL,
+    "airline" TEXT NOT NULL,
+    "shotAt" TEXT NOT NULL,
+    "ccAgree" BOOLEAN NOT NULL DEFAULT false,
+    "categoriesJson" TEXT,
+    "title" TEXT,
+    "msn" TEXT,
+    "serialNumber" TEXT,
+    "description" TEXT,
+    "uploaderMessage" TEXT,
+    "staffNote" TEXT,
+    "firstReviewedById" TEXT,
+    "firstReviewedAt" DATETIME,
+    "firstReviewDecision" TEXT,
+    "firstReviewReason" TEXT,
+    "reviewedById" TEXT,
+    "reviewedAt" DATETIME,
+    "reviewDecision" TEXT,
+    "reviewReason" TEXT,
+    "featured" BOOLEAN NOT NULL DEFAULT false,
+    "hot" BOOLEAN NOT NULL DEFAULT false,
+    "originalPath" TEXT NOT NULL,
+    "displayPath" TEXT NOT NULL,
+    "thumbPath" TEXT NOT NULL,
+    "originalMime" TEXT NOT NULL,
+    "displayMime" TEXT NOT NULL,
+    "fileName" TEXT,
+    "fileSizeBytes" INTEGER,
+    "width" INTEGER,
+    "height" INTEGER,
+    "watermarkJson" TEXT,
+    "exifJson" TEXT,
+    "exifSummaryJson" TEXT,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL,
+    CONSTRAINT "Photo_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User" ("id") ON DELETE RESTRICT ON UPDATE CASCADE,
+    CONSTRAINT "Photo_reviewedById_fkey" FOREIGN KEY ("reviewedById") REFERENCES "User" ("id") ON DELETE SET NULL ON UPDATE CASCADE,
+    CONSTRAINT "Photo_assignedReviewerId_fkey" FOREIGN KEY ("assignedReviewerId") REFERENCES "User" ("id") ON DELETE SET NULL ON UPDATE CASCADE
+);
+INSERT INTO "new_Photo" ("aircraftModel", "airline", "assignedReviewerId", "categoriesJson", "ccAgree", "createdAt", "description", "displayMime", "displayPath", "exifJson", "exifSummaryJson", "featured", "fileName", "fileSizeBytes", "height", "hot", "id", "msn", "originalMime", "originalPath", "registration", "reviewDecision", "reviewReason", "reviewedAt", "reviewedById", "serialNumber", "shotAirport", "shotAt", "staffNote", "status", "thumbPath", "title", "updatedAt", "uploaderMessage", "userId", "watermarkJson", "width") SELECT "aircraftModel", "airline", "assignedReviewerId", "categoriesJson", "ccAgree", "createdAt", "description", "displayMime", "displayPath", "exifJson", "exifSummaryJson", "featured", "fileName", "fileSizeBytes", "height", "hot", "id", "msn", "originalMime", "originalPath", "registration", "reviewDecision", "reviewReason", "reviewedAt", "reviewedById", "serialNumber", "shotAirport", "shotAt", "staffNote", "status", "thumbPath", "title", "updatedAt", "uploaderMessage", "userId", "watermarkJson", "width" FROM "Photo";
+DROP TABLE "Photo";
+ALTER TABLE "new_Photo" RENAME TO "Photo";
+CREATE INDEX "Photo_userId_status_createdAt_idx" ON "Photo"("userId", "status", "createdAt");
+CREATE INDEX "Photo_status_createdAt_idx" ON "Photo"("status", "createdAt");
+CREATE INDEX "Photo_registration_idx" ON "Photo"("registration");
+CREATE INDEX "Photo_shotAirport_idx" ON "Photo"("shotAirport");
+CREATE INDEX "Photo_aircraftModel_idx" ON "Photo"("aircraftModel");
+CREATE INDEX "Photo_airline_idx" ON "Photo"("airline");
+CREATE INDEX "Photo_assignedReviewerId_idx" ON "Photo"("assignedReviewerId");
+CREATE TABLE "new_User" (
+    "id" TEXT NOT NULL PRIMARY KEY,
+    "email" TEXT NOT NULL,
+    "passwordHash" TEXT NOT NULL,
+    "name" TEXT,
+    "points" INTEGER NOT NULL DEFAULT 0,
+    "priorityPasses" INTEGER NOT NULL DEFAULT 0,
+    "lastPriorityPurchaseAt" DATETIME,
+    "roleId" INTEGER NOT NULL DEFAULT 0,
+    "rejectStreak" INTEGER NOT NULL DEFAULT 0,
+    "deletedAt" DATETIME,
+    "uploadDisabled" BOOLEAN NOT NULL DEFAULT false,
+    "lastCheckInAt" DATETIME,
+    "createdAt" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" DATETIME NOT NULL
+);
+INSERT INTO "new_User" ("createdAt", "deletedAt", "email", "id", "lastCheckInAt", "name", "passwordHash", "points", "rejectStreak", "roleId", "updatedAt", "uploadDisabled") SELECT "createdAt", "deletedAt", "email", "id", "lastCheckInAt", "name", "passwordHash", "points", "rejectStreak", "roleId", "updatedAt", "uploadDisabled" FROM "User";
+DROP TABLE "User";
+ALTER TABLE "new_User" RENAME TO "User";
+CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
+PRAGMA foreign_keys=ON;
+PRAGMA defer_foreign_keys=OFF;

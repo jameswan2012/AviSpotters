@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Boeing",
+  "familyId": "747",
+  "modelId": "747-400",
+  "name": "747-400",
+  "introduced": 1989,
+  "productionStatus": "out-of-production",
+  "firstFlight": "1988-04-29",
+  "summary": "747 家族代表型號之一，採用翼尖小翼與更新航電，曾是長程樞紐航線與貨運市場的重要機型。",
+  "passengerCapacity": { "typical": 416, "max": 524 },
+  "rangeKm": 13450,
+  "cruiseSpeedKmh": 907,
+  "mtowKg": 396893,
+  "engines": ["GE CF6-80C2", "Pratt & Whitney PW4000", "Rolls-Royce RB211-524 (variants)"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "14F/70J/40W/292Y" }],
+  "majorOperators": ["British Airways (historical)", "Lufthansa (historical)", "Cathay Pacific (historical)"],
+  "manufacturersNotes": "747-400 以標誌性駝峰上層客艙與四發配置具有高辨識度，現多轉為貨運或逐步退役。",
+  "buyingCustomers": [{ "airline": "British Airways", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/British_Airways_Boeing_747-400_G-CIVI.jpg/1280px-British_Airways_Boeing_747-400_G-CIVI.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Lufthansa_Boeing_747-400_D-ABVF.jpg/1280px-Lufthansa_Boeing_747-400_D-ABVF.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Boeing_747",
+  "slug": "Boeing-747-400",
+  "keywords": ["747-400", "B744", "Boeing 747-400", "Jumbo Jet 747-400"]
+}
+

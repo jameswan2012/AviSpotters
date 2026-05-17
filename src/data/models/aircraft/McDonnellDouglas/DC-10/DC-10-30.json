@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "McDonnellDouglas",
+  "familyId": "DC-10",
+  "modelId": "DC-10-30",
+  "name": "DC-10-30",
+  "introduced": 1972,
+  "productionStatus": "out-of-production",
+  "firstFlight": "1970-08-29",
+  "summary": "DC-10-30 為 DC-10 系列長程型號之一，曾廣泛服務於洲際航線，現多以貨運/改裝用途留存。",
+  "passengerCapacity": { "typical": 270, "max": 380 },
+  "rangeKm": 10460,
+  "cruiseSpeedKmh": 908,
+  "mtowKg": 263000,
+  "engines": ["GE CF6-50"],
+  "layouts": [{ "name": "Typical 3-class", "seats": "18F/44J/208Y" }],
+  "majorOperators": ["Northwest Airlines (historical)", "KLM (historical)"],
+  "manufacturersNotes": "DC-10 與後續 MD-11 同為三發寬體機代表，機隊歷史與改裝貨機案例眾多。",
+  "buyingCustomers": [{ "airline": "KLM", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/KLM_DC-10-30_PH-DTC.jpg/1280px-KLM_DC-10-30_PH-DTC.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/McDonnell_Douglas_DC-10-30_Northwest_Airlines_N223NW.jpg/1280px-McDonnell_Douglas_DC-10-30_Northwest_Airlines_N223NW.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/McDonnell_Douglas_DC-10",
+  "slug": "McDonnellDouglas-DC-10-30",
+  "keywords": ["DC-10-30", "DC10-30", "DC10", "McDonnell Douglas DC-10", "DC-10"]
+}
+

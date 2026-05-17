@@ -1,0 +1,31 @@
+{
+  "manufacturerId": "Airbus",
+  "familyId": "A320",
+  "modelId": "A320neo",
+  "name": "A320neo",
+  "introduced": 2016,
+  "productionStatus": "in-service",
+  "firstFlight": "2014-09-25",
+  "summary": "A320 系列的 neo（New Engine Option）版本，透過新引擎與翼尖改良提升效率。",
+  "passengerCapacity": { "typical": 150, "max": 194 },
+  "rangeKm": 6300,
+  "cruiseSpeedKmh": 828,
+  "mtowKg": 79000,
+  "engines": ["CFM LEAP-1A", "Pratt & Whitney PW1100G-JM"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12F/138Y" }],
+  "majorOperators": ["IndiGo", "easyJet", "Lufthansa"],
+  "manufacturersNotes": "A320neo 透過新引擎選項與 Sharklets/翼尖改良，成為短中程市場的主力機型之一。（訂單/交付數可後續補齊權威來源）",
+  "buyingCustomers": [
+    { "airline": "IndiGo", "orders": null },
+    { "airline": "easyJet", "orders": null }
+  ],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Airbus_A320neo_%28F-WWBA%29.jpg/1280px-Airbus_A320neo_%28F-WWBA%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Airbus_A320neo_Lufthansa_D-AINJ.jpg/1280px-Airbus_A320neo_Lufthansa_D-AINJ.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Airbus_A320neo_IndiGo_VT-IZD.jpg/1280px-Airbus_A320neo_IndiGo_VT-IZD.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Airbus_A320neo_family",
+  "slug": "Airbus-A320neo",
+  "keywords": ["A320neo", "A20N", "Airbus A320neo", "A320 NEO", "A320-271N"]
+}
+

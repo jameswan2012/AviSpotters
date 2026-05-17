@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "ATR",
+  "familyId": "ATR-42",
+  "modelId": "ATR-42-600",
+  "name": "ATR 42-600",
+  "introduced": 2012,
+  "productionStatus": "in-service",
+  "firstFlight": "2010-03-04",
+  "summary": "ATR 42-600 為較小座級的渦槳支線客機，適合短程與小型機場支線航段。",
+  "passengerCapacity": { "typical": 46, "max": 50 },
+  "rangeKm": 1556,
+  "cruiseSpeedKmh": 500,
+  "mtowKg": 18600,
+  "engines": ["Pratt & Whitney Canada PW127M"],
+  "layouts": [{ "name": "Typical single-class", "seats": "48Y" }],
+  "majorOperators": ["Silver Airways", "PNG Air (examples)"],
+  "manufacturersNotes": "ATR 42 對於短跑道與中小機場具有優勢，常作為支線/通勤航班使用。",
+  "buyingCustomers": [{ "airline": "Silver Airways", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/ATR_42-600_%28F-WWLY%29.jpg/1280px-ATR_42-600_%28F-WWLY%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Silver_Airways_ATR_42_N407SV.jpg/1280px-Silver_Airways_ATR_42_N407SV.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/ATR_42",
+  "slug": "ATR-42-600",
+  "keywords": ["ATR 42-600", "ATR42-600", "AT46", "ATR42", "ATR 42"]
+}
+

@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Embraer",
+  "familyId": "E2",
+  "modelId": "E195-E2",
+  "name": "E195-E2",
+  "introduced": 2019,
+  "productionStatus": "in-service",
+  "firstFlight": "2017-03-29",
+  "summary": "E195-E2 為 E2 系列較大座級型號，透過新翼型與新引擎提升效率，適合中短程高頻航線。",
+  "passengerCapacity": { "typical": 132, "max": 146 },
+  "rangeKm": 4815,
+  "cruiseSpeedKmh": 870,
+  "mtowKg": 61500,
+  "engines": ["Pratt & Whitney PW1900G"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12J/120Y" }],
+  "majorOperators": ["Porter Airlines", "KLM Cityhopper"],
+  "manufacturersNotes": "E2 系列相較 1 代在翼型、航電與引擎上有明顯更新，並維持 2-2 座位配置。",
+  "buyingCustomers": [{ "airline": "Porter Airlines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Embraer_E195-E2_F-WWRT.jpg/1280px-Embraer_E195-E2_F-WWRT.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Porter_Airlines_Embraer_E195-E2_C-FPPE.jpg/1280px-Porter_Airlines_Embraer_E195-E2_C-FPPE.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Embraer_E-Jet_E2_family",
+  "slug": "Embraer-E195-E2",
+  "keywords": ["E195-E2", "E195 E2", "Embraer E195-E2", "E95-E2", "E195E2"]
+}
+

@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Bombardier",
+  "familyId": "Dash-8",
+  "modelId": "Q400",
+  "name": "Dash 8 Q400",
+  "introduced": 2000,
+  "productionStatus": "in-service",
+  "firstFlight": "1998-01-31",
+  "summary": "Dash 8 Q400（DHC-8-400）為高速渦槳支線客機，常見於短程與支線航線。",
+  "passengerCapacity": { "typical": 78, "max": 90 },
+  "rangeKm": 2520,
+  "cruiseSpeedKmh": 667,
+  "mtowKg": 29257,
+  "engines": ["Pratt & Whitney Canada PW150A"],
+  "layouts": [{ "name": "Typical single-class", "seats": "78Y" }],
+  "majorOperators": ["Porter Airlines", "ANA", "Alaska Airlines (historical)"],
+  "manufacturersNotes": "Q400 以較高巡航速度縮短航段時間，在部分市場可替代小型噴射機的效率。",
+  "buyingCustomers": [{ "airline": "Porter Airlines", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Porter_Airlines_Dash_8_Q400_C-FPYO.jpg/1280px-Porter_Airlines_Dash_8_Q400_C-FPYO.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/ANA_Wings_DHC-8-402Q_JA845A.jpg/1280px-ANA_Wings_DHC-8-402Q_JA845A.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/De_Havilland_Canada_Dash_8",
+  "slug": "Bombardier-Q400",
+  "keywords": ["Q400", "Dash 8 Q400", "DHC-8-400", "DH8D", "Bombardier Q400"]
+}
+

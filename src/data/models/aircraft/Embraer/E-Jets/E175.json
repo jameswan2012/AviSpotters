@@ -1,0 +1,27 @@
+{
+  "manufacturerId": "Embraer",
+  "familyId": "E-Jets",
+  "modelId": "E175",
+  "name": "E175",
+  "introduced": 2005,
+  "productionStatus": "in-service",
+  "firstFlight": "2003-06-16",
+  "summary": "E175 為 E-Jets 1 代系列中常見支線噴射客機，適合高頻短中程與樞紐支線航線。",
+  "passengerCapacity": { "typical": 76, "max": 88 },
+  "rangeKm": 3700,
+  "cruiseSpeedKmh": 828,
+  "mtowKg": 38900,
+  "engines": ["GE CF34-8E"],
+  "layouts": [{ "name": "Typical 2-class", "seats": "12J/64Y" }],
+  "majorOperators": ["American Eagle", "United Express", "Delta Connection"],
+  "manufacturersNotes": "E175 在北美支線市場常見，客艙 2-2 座位配置體驗較佳。",
+  "buyingCustomers": [{ "airline": "United Express", "orders": null }],
+  "images": [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Embraer_175LR_American_Eagle_N418YX.jpg/1280px-Embraer_175LR_American_Eagle_N418YX.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Republic_Airways_Embraer_175_N110HQ.jpg/1280px-Republic_Airways_Embraer_175_N110HQ.jpg"
+  ],
+  "wikiUrl": "https://en.wikipedia.org/wiki/Embraer_E-Jet_family",
+  "slug": "Embraer-E175",
+  "keywords": ["E175", "E-175", "Embraer 175", "E75", "E75L"]
+}
+

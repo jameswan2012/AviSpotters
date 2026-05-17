@@ -1,0 +1,93 @@
+[
+  {
+    "id": "Boeing",
+    "name": "Boeing",
+    "country": "USA",
+    "founded": 1916,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Boeing_full_logo.svg/512px-Boeing_full_logo.svg.png",
+    "description": "波音（Boeing）是美國主要的商用與軍用航太製造商，737/777/787 等系列廣泛運行於全球航線。",
+    "families": ["737", "747", "757", "767", "777", "787"]
+  },
+  {
+    "id": "Airbus",
+    "name": "Airbus",
+    "country": "EU",
+    "founded": 1970,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Airbus_Logo_2017.svg/512px-Airbus_Logo_2017.svg.png",
+    "description": "空中巴士（Airbus）是歐洲大型航太製造商，A320/A330/A350 等系列在全球擁有龐大機隊。",
+    "families": ["A220", "A320", "A330", "A340", "A350", "A380"]
+  },
+  {
+    "id": "Embraer",
+    "name": "Embraer",
+    "country": "Brazil",
+    "founded": 1969,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Embraer_logo.svg/512px-Embraer_logo.svg.png",
+    "description": "巴西航太製造商，以區域客機與 E-Jets 系列聞名，廣泛用於短中程與支線航線。",
+    "families": ["E-Jets", "E2"]
+  },
+  {
+    "id": "Bombardier",
+    "name": "Bombardier",
+    "country": "Canada",
+    "founded": 1942,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Bombardier_Transportation_logo.svg/512px-Bombardier_Transportation_logo.svg.png",
+    "description": "加拿大製造商（商用航空業務歷史脈絡下），CRJ 與 Dash 8（Q400）曾是區域航空常見機型。",
+    "families": ["CRJ", "Dash-8"]
+  },
+  {
+    "id": "COMAC",
+    "name": "COMAC",
+    "country": "China",
+    "founded": 2008,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/58/Comac_logo.svg/512px-Comac_logo.svg.png",
+    "description": "中國商飛（COMAC）研製 ARJ21 與 C919 等商用客機，逐步投入營運與擴大機隊規模。",
+    "families": ["ARJ21", "C919"]
+  },
+  {
+    "id": "ATR",
+    "name": "ATR",
+    "country": "EU",
+    "founded": 1981,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/ATR_logo.svg/512px-ATR_logo.svg.png",
+    "description": "ATR 為渦槳支線客機主要製造商，ATR 42/72 系列常用於短程與高頻支線航線。",
+    "families": ["ATR-42", "ATR-72"]
+  },
+  {
+    "id": "McDonnellDouglas",
+    "name": "McDonnell Douglas",
+    "country": "USA",
+    "founded": 1967,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/McDonnell_Douglas_logo.svg/512px-McDonnell_Douglas_logo.svg.png",
+    "description": "麥道（McDonnell Douglas）曾是重要商用機製造商，MD-80、MD-11、DC-10 等機型仍可在部分航司/貨運領域見到。",
+    "families": ["MD-80", "MD-11", "DC-10"]
+  },
+  {
+    "id": "Sukhoi",
+    "name": "Sukhoi",
+    "country": "Russia",
+    "founded": 1939,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Sukhoi_logo.svg/512px-Sukhoi_logo.svg.png",
+    "description": "蘇霍伊（Sukhoi）在民用領域較具代表性的是 Superjet 系列支線噴射客機。",
+    "families": ["SSJ"]
+  },
+  {
+    "id": "Irkut",
+    "name": "Irkut",
+    "country": "Russia",
+    "founded": 1932,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Irkut_logo.svg/512px-Irkut_logo.svg.png",
+    "description": "伊爾庫特（Irkut）研製 MC-21 單通道客機，面向窄體市場。",
+    "families": ["MC-21"]
+  },
+  {
+    "id": "Antonov",
+    "name": "Antonov",
+    "country": "Ukraine",
+    "founded": 1946,
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Antonov_logo.svg/512px-Antonov_logo.svg.png",
+    "description": "安東諾夫（Antonov）以大型運輸機聞名，部分機型亦作民用貨運與特種任務使用。",
+    "families": ["An-124", "An-225"]
+  }
+]
+
