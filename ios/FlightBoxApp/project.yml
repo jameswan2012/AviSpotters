@@ -1,0 +1,28 @@
+name: AvispottersApp
+options:
+  bundleIdPrefix: net.avispotters
+  deploymentTarget:
+    iOS: "16.0"
+targets:
+  AvispottersApp:
+    type: application
+    platform: iOS
+    sources:
+      - Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: net.avispotters.avispotters
+        INFOPLIST_KEY_UIApplicationSceneManifest_Generation: true
+        INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone: UIInterfaceOrientationPortrait
+        SWIFT_VERSION: 5.9
+    info:
+      path: Info.plist
+      properties:
+        CFBundleDisplayName: Avispotters
+        UILaunchScreen:
+          UIColorName: ""
+          UIImageName: ""
+        NSAppTransportSecurity:
+          NSAllowsArbitraryLoads: true
+    scheme:
+      testTargets: []

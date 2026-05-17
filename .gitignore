@@ -31,21 +31,3 @@ prisma/dev.db-*
 
 # local scripts
 restart.sh
-
-# local / cache
-.local-mailbox/
-tsconfig.tsbuildinfo
-
-# optional: keep repo source-only (missing part)
-ios/
-
-# prisma local db / backups (never commit)
-prisma/*.db
-prisma/*.db.*
-prisma/*.db.bak_*
-prisma/**/*.db
-prisma/**/*.db.*
-
-# prisma schema backups (never commit)
-prisma/schema.prisma.bak_*
-prisma/schema.prisma.bak_pg_*

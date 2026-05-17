@@ -1,0 +1,1017 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  phone        String?  @unique
+  phoneVerifiedAt DateTime?
+  passwordHash String
+  name         String?
+  avatarPath   String?
+  avatarMime   String?
+  avatarSizeBytes Int?
+  avatarUpdatedAt DateTime?
+  backgroundPath String?
+  backgroundMime String?
+  backgroundSizeBytes Int?
+  backgroundUpdatedAt DateTime?
+  profileBio   String?
+  points       Int      @default(0)
+  priorityPasses Int    @default(0) // priority queue passes
+  lastPriorityPurchaseAt DateTime?
+  roleId       Int      @default(0)
+  rejectStreak Int      @default(0)
+  deletedAt    DateTime?
+  uploadDisabled Boolean @default(false)
+  lastCheckInAt DateTime?
+  lastSeenAt   DateTime?
+  chatReadReceiptsEnabled Boolean @default(true)
+  email2faEnabled Boolean @default(true)
+  photoDeleteVerifiedUntil DateTime?
+  lastLoginIp  String?
+  lastLoginUserAgent String?
+  lastLoginAt  DateTime?
+  createdIp    String?
+  createdUserAgent String?
+  trustedDevices TrustedDevice[]
+  loginDeviceChallenges LoginDeviceChallenge[]
+  emailOtps    EmailOtp[]
+  smsOtps      SmsOtp[]
+  emailVerifyGrants EmailVerifyGrant[]
+  smsVerifyGrants SmsVerifyGrant[]
+  conversations Conversation[] @relation("ConversationUser")
+  staffConversations Conversation[] @relation("ConversationStaff")
+  messages     Message[]
+  chatRoomsCreated ChatRoom[] @relation("ChatRoomCreatedBy")
+  chatMemberships ChatMember[]
+  chatMessages  ChatMessage[]
+  chatRoomBans      ChatRoomBan[] @relation("ChatRoomBanUser")
+  chatRoomBansIssued ChatRoomBan[] @relation("ChatRoomBanIssuedBy")
+  modelOverridesUpdated ModelOverride[] @relation("ModelOverrideUpdatedBy")
+  pageContentsUpdated PageContent[] @relation("PageContentUpdatedBy")
+  aircraftRegistrationsUpdated AircraftRegistration[] @relation("AircraftRegistrationUpdatedBy")
+  aircraftRegistrationSubmissions AircraftRegistrationSubmission[] @relation("AircraftRegistrationSubmittedBy")
+  aircraftRegistrationSubmissionsReviewed AircraftRegistrationSubmission[] @relation("AircraftRegistrationReviewedBy")
+  newsCreated   News[]     @relation("NewsCreatedBy")
+  siteSettingsUpdated SiteSetting[] @relation("SiteSettingUpdatedBy")
+  photos       Photo[]
+  photosReReviewRequested Photo[] @relation("PhotoReReviewRequestedBy")
+  photosFirstReviewed Photo[] @relation("PhotoFirstReviewedBy")
+  photosReviewed Photo[] @relation("PhotoReviewedBy")
+  photosAssigned Photo[] @relation("PhotoAssignedTo")
+  photoLikes    PhotoLike[]
+  photoComments PhotoComment[]
+  photoReports  PhotoReport[]
+  customLeaderboardsCreated CustomLeaderboard[] @relation("CustomLeaderboardCreatedBy")
+  customLeaderboardsUpdated CustomLeaderboard[] @relation("CustomLeaderboardUpdatedBy")
+  ticketsResolved Ticket[]
+  appeals      Appeal[]
+  appealsReviewed Appeal[] @relation("AppealReviewedBy")
+  correctionReports CorrectionReport[]
+  correctionReportsReviewed CorrectionReport[] @relation("CorrectionReportReviewedBy")
+  accountBans  AccountBan[] @relation("AccountBanUser")
+  bansIssued   AccountBan[] @relation("AccountBanIssuedBy")
+  ipBansIssued IpBan[]      @relation("IpBanIssuedBy")
+  staffApplications StaffApplication[]
+  staffApplicationsReviewed StaffApplication[] @relation("StaffApplicationReviewedBy")
+  staffApplicationQuestionsUpdated StaffApplicationQuestion[] @relation("StaffApplicationQuestionUpdatedBy")
+  // Video relations
+  videoAccount  VideoAccount?
+  videoCertificationsReviewed VideoCertification[] @relation("CertificationReviewedBy")
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model TrustedDevice {
+  id             String   @id @default(cuid())
+  userId         String
+  deviceHash     String
+  label          String?
+  firstVerifiedAt DateTime @default(now())
+  lastUsedAt     DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, deviceHash])
+  @@index([userId, lastUsedAt])
+}
+
+model LoginDeviceChallenge {
+  id         String   @id @default(cuid())
+  userId     String
+  deviceHash String
+  expiresAt  DateTime
+  verifiedAt DateTime?
+  ip         String?
+  userAgent  String?
+  createdAt  DateTime @default(now())
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([expiresAt])
+  @@index([userId, createdAt])
+}
+
+model CaptchaChallenge {
+  id            String   @id @default(cuid())
+  answerHash    String
+  salt          String
+  expiresAt     DateTime
+  attempts      Int      @default(0)
+  usedAt        DateTime?
+  ip            String?
+  userAgent     String?
+  createdAt     DateTime @default(now())
+
+  @@index([expiresAt])
+  @@index([createdAt])
+}
+
+model EmailOtp {
+  id           String   @id @default(cuid())
+  email        String
+  userId       String?
+  purpose      String   // register | deactivate | photo_delete | change_password | change_name | change_email
+  codeHash     String
+  salt         String
+  expiresAt    DateTime
+  failedAttempts Int    @default(0)
+  verifiedAt   DateTime?
+  createdAt    DateTime @default(now())
+  lastSentAt   DateTime @default(now())
+  ip           String?
+  userAgent    String?
+  metadataJson String?
+
+  user         User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([email, purpose, createdAt])
+  @@index([userId, purpose, createdAt])
+  @@index([purpose, expiresAt])
+}
+
+model EmailVerifyGrant {
+  id           String   @id @default(cuid())
+  email        String
+  userId       String?
+  purpose      String   // register | deactivate | change_password | change_name | change_email
+  metadataJson String?
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime
+  consumedAt   DateTime?
+
+  user         User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([email, purpose, createdAt])
+  @@index([userId, purpose, createdAt])
+  @@index([purpose, expiresAt])
+}
+
+model SmsOtp {
+  id           String   @id @default(cuid())
+  phone        String
+  userId       String?
+  purpose      String   // register | login_bind_phone
+  codeHash     String
+  salt         String
+  expiresAt    DateTime
+  failedAttempts Int    @default(0)
+  verifiedAt   DateTime?
+  createdAt    DateTime @default(now())
+  lastSentAt   DateTime @default(now())
+  ip           String?
+  userAgent    String?
+  metadataJson String?
+
+  user         User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([phone, purpose, createdAt])
+  @@index([userId, purpose, createdAt])
+  @@index([purpose, expiresAt])
+}
+
+model SmsVerifyGrant {
+  id           String   @id @default(cuid())
+  phone        String
+  userId       String?
+  purpose      String   // register | login_bind_phone
+  metadataJson String?
+  createdAt    DateTime @default(now())
+  expiresAt    DateTime
+  consumedAt   DateTime?
+
+  user         User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([phone, purpose, createdAt])
+  @@index([userId, purpose, createdAt])
+  @@index([purpose, expiresAt])
+}
+
+model StaffApplication {
+  id         String   @id @default(cuid())
+  userId     String
+  status     String   @default("draft") // draft | submitted | reviewing | accepted | rejected
+  tracksJson String?  // JSON string[]: TOGA, Planespotter, APJP
+  imagesJson String?  // JSON {path,mime,sizeBytes}[]
+  answersJson String? // JSON {questionId,answer}[]
+  submittedAt DateTime?
+  reviewedById String?
+  reviewedAt  DateTime?
+  decisionNote String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reviewedBy User?    @relation("StaffApplicationReviewedBy", fields: [reviewedById], references: [id])
+
+  @@index([status, createdAt])
+  @@index([userId, createdAt])
+}
+
+model StaffApplicationQuestion {
+  id            String   @id @default(cuid())
+  order         Int      @default(0)
+  promptJson    String   // JSON {zhHant,zhHans,en}
+  imagePath     String?
+  imageMime     String?
+  imageSizeBytes Int?
+  active        Boolean  @default(true)
+  updatedById   String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  updatedBy     User?    @relation("StaffApplicationQuestionUpdatedBy", fields: [updatedById], references: [id])
+
+  @@index([active, order])
+  @@index([updatedAt])
+}
+
+model AccountBan {
+  id          String   @id @default(cuid())
+  userId      String
+  reason      String?
+  bannedUntil DateTime? // null = permanent
+  revokedAt   DateTime?
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user        User     @relation("AccountBanUser", fields: [userId], references: [id], onDelete: Cascade)
+  createdBy   User     @relation("AccountBanIssuedBy", fields: [createdById], references: [id])
+
+  @@index([userId, revokedAt, bannedUntil])
+  @@index([createdById, createdAt])
+}
+
+model IpBan {
+  id          String   @id @default(cuid())
+  ip          String   // exact IP or prefix ending with '*', e.g. "1.2.3.*"
+  reason      String?
+  bannedUntil DateTime? // null = permanent
+  revokedAt   DateTime?
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  createdBy   User     @relation("IpBanIssuedBy", fields: [createdById], references: [id])
+
+  @@index([ip, revokedAt, bannedUntil])
+  @@index([createdById, createdAt])
+}
+
+model AircraftRegistrationSubmission {
+  id            String   @id @default(cuid())
+  registration  String
+  aircraftModel String?
+  airline       String?
+  msn           String?
+  status        String   @default("pending") // pending | approved | rejected
+  note          String?
+  submittedById String
+  reviewedById  String?
+  reviewedAt    DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  submittedBy   User     @relation("AircraftRegistrationSubmittedBy", fields: [submittedById], references: [id])
+  reviewedBy    User?    @relation("AircraftRegistrationReviewedBy", fields: [reviewedById], references: [id])
+
+  @@index([status, createdAt])
+  @@index([registration])
+  @@index([submittedById, createdAt])
+}
+
+model PhotoLike {
+  id        String   @id @default(cuid())
+  photoId   String
+  userId    String
+  createdAt DateTime @default(now())
+
+  photo Photo @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([photoId, userId])
+  @@index([userId, createdAt])
+}
+
+model PhotoComment {
+  id        String   @id @default(cuid())
+  photoId   String
+  userId    String
+  body      String
+  pinned    Boolean  @default(false)
+  createdAt DateTime @default(now())
+
+  photo Photo @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([photoId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model PhotoReport {
+  id        String   @id @default(cuid())
+  photoId   String
+  userId    String
+  reason    String
+  status    String   @default("open") // open | closed
+  createdAt DateTime @default(now())
+
+  photo Photo @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([status, createdAt])
+  @@index([photoId, createdAt])
+}
+
+model CustomLeaderboard {
+  id               String   @id @default(cuid())
+  enabled          Boolean  @default(true)
+  titleJson        String   // JSON: {"zh-Hant":string,"zh-Hans":string,"en":string}
+  descJson         String?  // JSON: {"zh-Hant":string,"zh-Hans":string,"en":string}
+  metric           String   @default("approved_count") // approved_count | pass_rate
+  rangeKey         String   @default("all") // all | 7d | 30d | custom
+  rangeStart       DateTime?
+  rangeEnd         DateTime?
+  participantsJson String?  // JSON string[] userIds; null/empty => all users
+  createdById      String?
+  updatedById      String?
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  createdBy        User?    @relation("CustomLeaderboardCreatedBy", fields: [createdById], references: [id])
+  updatedBy        User?    @relation("CustomLeaderboardUpdatedBy", fields: [updatedById], references: [id])
+
+  @@index([enabled, createdAt])
+  @@index([rangeKey, createdAt])
+  @@index([createdById, createdAt])
+}
+
+model Conversation {
+  id              String   @id @default(cuid())
+  userId          String
+  assignedStaffId String?
+  status          String   @default("open") // open | closed
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation("ConversationUser", fields: [userId], references: [id])
+  assignedStaff   User?    @relation("ConversationStaff", fields: [assignedStaffId], references: [id])
+  messages        Message[]
+
+  @@index([userId])
+  @@index([assignedStaffId])
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  senderId       String
+  body           String
+  createdAt      DateTime     @default(now())
+
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  sender         User         @relation(fields: [senderId], references: [id])
+
+  @@index([conversationId, createdAt])
+  @@index([senderId])
+}
+
+model ChatRoom {
+  id          String   @id @default(cuid())
+  type        String   @default("public") // public | direct
+  name        String?
+  directKey   String?  @unique
+  createdById String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  createdBy User? @relation("ChatRoomCreatedBy", fields: [createdById], references: [id])
+  members   ChatMember[]
+  messages  ChatMessage[]
+  bans      ChatRoomBan[]
+  videoShares VideoShare[]
+
+  @@index([type, updatedAt])
+}
+
+model ChatMember {
+  id         String   @id @default(cuid())
+  roomId     String
+  userId     String
+  role       String   @default("member") // owner | mod | member
+  mutedUntil DateTime?
+  joinedAt   DateTime @default(now())
+  lastReadAt DateTime?
+
+  room ChatRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([roomId, userId])
+  @@index([userId, joinedAt])
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  roomId    String
+  userId    String
+  kind      String   @default("text") // text | image
+  body      String
+  attachmentsJson String?
+  createdAt DateTime @default(now())
+
+  room ChatRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([roomId, createdAt])
+  @@index([userId, createdAt])
+}
+
+model ChatRoomBan {
+  id          String   @id @default(cuid())
+  roomId      String
+  userId      String
+  reason      String?
+  bannedUntil DateTime? // null = permanent
+  revokedAt   DateTime?
+  createdById String
+  createdAt   DateTime @default(now())
+
+  room      ChatRoom @relation(fields: [roomId], references: [id], onDelete: Cascade)
+  user      User     @relation("ChatRoomBanUser", fields: [userId], references: [id], onDelete: Cascade)
+  createdBy User     @relation("ChatRoomBanIssuedBy", fields: [createdById], references: [id])
+
+  @@index([roomId, userId, revokedAt, bannedUntil])
+  @@index([createdById, createdAt])
+}
+
+model Airport {
+  id        String   @id @default(cuid())
+  iata      String?  @unique
+  icao      String?  @unique
+  nameZh    String
+  nameEn    String
+  keywordsJson String? // JSON string[]: aliases/keywords for search (lowercased)
+  intro     String?
+  factsJson String? // JSON string of {label,value}[]
+  city      String?
+  province  String?
+  country   String?
+  timezone  String?
+  openedOn  String?
+  category  String? // e.g. 4F
+  nature    String? // civil | mixed | military
+  elevationM Int?
+
+  // structured data (JSON strings for flexibility)
+  terminalsJson String?
+  airlinesJson  String?
+  trafficJson   String? // commercial flights, pax, cargo etc
+  runwaysJson   String?
+  photosJson    String?
+  taxiwayPhotosJson String?
+  lat       Float?
+  lon       Float?
+  notes     String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Airline {
+  id          String   @id @default(cuid())
+  iata        String?  @unique
+  icao        String?  @unique
+  nameZh      String?
+  nameEn      String?
+  keywordsJson String? // JSON string[]: aliases/keywords for search (lowercased)
+  notes       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([iata])
+  @@index([icao])
+}
+
+model Appeal {
+  id          String   @id @default(cuid())
+  photoId     String
+  userId      String
+  message     String
+  status      String   @default("open") // open | accepted | dismissed
+  staffReply  String?
+  reviewedById String?
+  reviewedAt  DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  photo       Photo    @relation(fields: [photoId], references: [id], onDelete: Cascade)
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reviewedBy  User?    @relation("AppealReviewedBy", fields: [reviewedById], references: [id])
+
+  @@index([status, createdAt])
+  @@index([userId, createdAt])
+  @@index([photoId])
+}
+
+model CorrectionReport {
+  id           String   @id @default(cuid())
+  targetType   String   // photo | airport
+  targetId     String
+  userId       String
+  message      String
+  status       String   @default("open") // open | kept | deleted
+  reviewedById String?
+  reviewedAt   DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reviewedBy   User?    @relation("CorrectionReportReviewedBy", fields: [reviewedById], references: [id])
+
+  @@index([status, createdAt])
+  @@index([userId, createdAt])
+  @@index([targetType, targetId])
+}
+
+model PageContent {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  contentJson String
+  updatedById String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  updatedBy   User?    @relation("PageContentUpdatedBy", fields: [updatedById], references: [id])
+}
+
+model SiteSetting {
+  key         String   @id // e.g. "maintenance"
+  valueJson   String   // JSON for flexibility
+  updatedById String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  updatedBy   User?    @relation("SiteSettingUpdatedBy", fields: [updatedById], references: [id])
+
+  @@index([updatedAt])
+}
+
+model News {
+  id          String   @id @default(cuid())
+  title       String
+  body        String?
+  imageUrl    String?
+  imagePath   String?
+  imageMime   String?
+  imageSizeBytes Int?
+  imageUpdatedAt DateTime?
+  startsAt    DateTime? // null = immediately
+  endsAt      DateTime? // null = never expires
+  createdById String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  createdBy   User     @relation("NewsCreatedBy", fields: [createdById], references: [id])
+
+  @@index([startsAt, endsAt, createdAt])
+  @@index([createdById, createdAt])
+}
+
+model Ticket {
+  id          String   @id @default(cuid())
+  email       String
+  body        String
+  status      String   @default("open") // open | closed
+  staffReply  String?
+  resolvedById String?
+  resolvedAt  DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  resolvedBy  User?    @relation(fields: [resolvedById], references: [id])
+
+  @@index([status, createdAt])
+  @@index([email, createdAt])
+  @@index([resolvedById, createdAt])
+}
+
+model Photo {
+  id              String   @id @default(cuid())
+  userId          String
+  status          String   @default("pending") // pending | approved | rejected
+  assignedReviewerId String?
+  priority        Int      @default(0) // 0=normal, 1=priority
+  reReviewRequestedAt DateTime?
+  reReviewRequestedById String?
+  reReviewReason   String?
+
+  // required upload info
+  registration    String
+  shotAirport     String
+  aircraftModel   String
+  airline         String
+  shotAt          String // YYYY-MM-DD
+  ccAgree         Boolean  @default(false)
+  categoriesJson  String? // JSON string of string[]
+
+  // optional info
+  title           String?
+  msn             String? // 製造商序列號（可選）
+  serialNumber    String? // 序列號（可選）
+  description     String?
+
+  // staff-only message from uploader
+  uploaderMessage String? // 留言（僅審核員可見）
+
+  // preferred response language (for staff)
+  replyLocale     String   @default("zh-Hant") // zh-Hans | zh-Hant | en
+
+  // reviewer internal note
+  staffNote       String?
+
+  // review results
+  firstReviewedById String?
+  firstReviewedAt   DateTime?
+  firstReviewDecision String? // rejected (first-pass)
+  firstReviewReason String?   // shown to photographer after final decision
+  reviewedById    String?
+  reviewedAt      DateTime?
+  reviewDecision  String? // approved | rejected
+  reviewReason    String? // rejection reason / suggestion shown to photographer
+  featured        Boolean  @default(false)
+  hot             Boolean  @default(false)
+
+  // files
+  originalPath    String
+  displayPath     String
+  thumbPath       String
+  originalMime    String
+  displayMime     String
+  fileName        String?
+  fileSizeBytes   Int?
+  width           Int?
+  height          Int?
+  watermarkJson   String? // JSON {x,y,scale}
+  clientUploadId  String? // idempotency key from client
+
+  // EXIF info (from original)
+  exifJson        String?
+  exifSummaryJson String?
+
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  user            User     @relation(fields: [userId], references: [id])
+  reReviewRequestedBy User? @relation("PhotoReReviewRequestedBy", fields: [reReviewRequestedById], references: [id])
+  firstReviewedBy  User?    @relation("PhotoFirstReviewedBy", fields: [firstReviewedById], references: [id])
+  reviewedBy      User?    @relation("PhotoReviewedBy", fields: [reviewedById], references: [id])
+  assignedReviewer User?   @relation("PhotoAssignedTo", fields: [assignedReviewerId], references: [id])
+
+  likes           PhotoLike[]
+  comments        PhotoComment[]
+  reports         PhotoReport[]
+  appeals         Appeal[]
+
+  @@index([userId, status, createdAt])
+  @@index([status, createdAt])
+  @@index([registration])
+  @@index([shotAirport])
+  @@index([aircraftModel])
+  @@index([airline])
+  @@index([assignedReviewerId])
+  @@index([status, reReviewRequestedAt])
+  @@unique([userId, clientUploadId])
+}
+
+model ModelOverride {
+  id             String   @id @default(cuid())
+  manufacturerId String
+  familyId       String
+  modelId        String
+  displayName    String?
+  hidden         Boolean  @default(false)
+  summary        String?
+  rangeKm        Int?
+  cruiseSpeedKmh Int?
+  mtowKg         Int?
+  enginesJson    String? // JSON string of string[]
+  layoutsJson    String? // JSON string of layouts[]
+  operatorsJson  String? // JSON string of string[]
+  imagesJson     String? // JSON string of string[]
+  notes          String?
+  updatedById    String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  updatedBy      User?    @relation("ModelOverrideUpdatedBy", fields: [updatedById], references: [id])
+
+  @@unique([manufacturerId, familyId, modelId])
+  @@index([manufacturerId, familyId])
+}
+
+model AircraftRegistration {
+  id            String   @id @default(cuid())
+  registration  String   @unique
+  aircraftModel String?
+  airline       String?
+  msn           String?
+  keywordsJson  String? // JSON string[]: aliases/keywords for search (lowercased)
+  updatedById   String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  updatedBy     User?    @relation("AircraftRegistrationUpdatedBy", fields: [updatedById], references: [id])
+
+  @@index([registration])
+}
+
+// ============================================
+// Video Account / Short Video Models
+// ============================================
+
+// 视频账号 - 用户开通的视频号
+model VideoAccount {
+  id            String   @id @default(cuid())
+  userId        String   @unique
+  nickname      String
+  avatarPath    String?
+  avatarMime    String?
+  bio           String?  // 个人介绍
+  region        String?  // 地区
+  gender        String?  // male | female | other
+  isPublic      Boolean  @default(true) // 整体可见性: 公开
+  videoCount    Int      @default(0)
+  followerCount Int      @default(0)
+  followingCount Int     @default(0)
+  totalViews    Int      @default(0)
+  totalLikes    Int      @default(0)
+  
+  // 认证状态
+  certificationStatus String @default("none") // none | pending | white | yellow
+  certificationScore Int    @default(0) // 认证评分: 0-100
+  
+  // 认证申请记录
+  certificationWarnings Int @default(0) // 警告次数
+  certificationBannedUntil DateTime? // 认证申请封禁直到
+  
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  videos        Video[]
+  comments      VideoComment[]
+  likes         VideoLike[]
+  shares        VideoShare[]
+  favorites     VideoFavorite[]
+  follows       UserFollow[] @relation("FollowFollowing")
+  followers     UserFollow[] @relation("FollowFollower")
+  certifications VideoCertification[]
+  notificationsReceived VideoNotification[] @relation("NotificationRecipient")
+  notificationsSent VideoNotification[] @relation("NotificationFrom")
+
+  @@index([userId])
+  @@index([certificationStatus])
+  @@index([createdAt])
+}
+
+// 视频
+model Video {
+  id            String   @id @default(cuid())
+  accountId     String
+  type          String   @default("video") // video | image (图文)
+  
+  // 文件信息
+  videoPath     String?  // 视频文件路径 (mp4/mov)
+  videoMime     String?
+  videoSizeBytes Int?
+  videoDuration Int?     // 视频时长(秒)
+  width         Int?
+  height        Int?
+  thumbnailPath String?  // 封面图
+  thumbnailMime String?
+  
+  // 图文图片 (最多9张)
+  imagePathsJson String? // JSON string[] 图片路径
+  imageCount    Int      @default(0)
+  
+  // 内容信息
+  description   String?  // 文案描述
+  location      String?  // 拍摄地点(机场)
+  
+  // 飞机相关信息 (拍摄飞机需填写)
+  aircraftInfoJson String? // JSON {registration?, aircraftModel?, airline?, airport?, shotAt?}
+  
+  // 标签
+  tagsJson       String?  // JSON string[] 标签ID数组
+  
+  // 原创声明
+  isOriginal    Boolean  @default(false)
+  originalConfirmed Boolean @default(false) // 用户确认原创
+  
+  // 可见性设置
+  visibility    String   @default("public") // public | friends | followers | private
+  
+  // 审核状态
+  status        String   @default("pending") // pending | approved | rejected
+  
+  // 审核评分 (用户和作者都看不见)
+  qualityScore  Int      @default(0) // 0-100 优质程度
+  
+  // 统计数据
+  viewCount     Int      @default(0)
+  likeCount     Int      @default(0)
+  commentCount  Int      @default(0)
+  shareCount    Int      @default(0)
+  favoriteCount Int      @default(0)
+  
+  // 发布信息
+  publishedAt   DateTime?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  
+  // 修改记录 (3个月内可修改封面和文案)
+  lastModifiedAt DateTime?
+  descriptionModified Boolean @default(false)
+  descriptionModifiedAt DateTime?
+  
+  account       VideoAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  comments      VideoComment[]
+  likes         VideoLike[]
+  shares        VideoShare[]
+  favorites     VideoFavorite[]
+  notifications VideoNotification[]
+
+  @@index([accountId, status, createdAt])
+  @@index([status, createdAt])
+  @@index([visibility, status])
+  @@index([publishedAt])
+}
+
+// 视频标签 (管理员添加)
+model VideoTag {
+  id          String   @id @default(cuid())
+  name        String
+  isActive    Boolean  @default(true)
+  usageCount  Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@unique([name])
+  @@index([isActive])
+}
+
+// 视频评论
+model VideoComment {
+  id          String   @id @default(cuid())
+  videoId     String
+  accountId   String
+  parentId    String?  // 父评论ID (回复)
+  body        String
+  likeCount   Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  video       Video      @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  account     VideoAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  parent      VideoComment? @relation("CommentReplies", fields: [parentId], references: [id])
+  replies     VideoComment[] @relation("CommentReplies")
+  likes       VideoLike[]
+  notifications VideoNotification[]
+
+  @@index([videoId, createdAt])
+  @@index([accountId, createdAt])
+  @@index([parentId])
+}
+
+// 视频点赞
+model VideoLike {
+  id          String   @id @default(cuid())
+  videoId     String?
+  commentId   String?
+  accountId   String
+  createdAt   DateTime @default(now())
+
+  video       Video?        @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  comment     VideoComment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  account     VideoAccount  @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@unique([videoId, accountId])
+  @@unique([commentId, accountId])
+  @@index([accountId, createdAt])
+}
+
+// 视频转发
+model VideoShare {
+  id          String   @id @default(cuid())
+  videoId     String
+  accountId   String
+  // 转发类型: private(私信) | group(群聊)
+  shareType   String   @default("private") 
+  targetRoomId String? // 群聊房间ID (如果是群聊转发)
+  createdAt   DateTime @default(now())
+
+  video       Video        @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  account     VideoAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  targetRoom  ChatRoom?    @relation(fields: [targetRoomId], references: [id])
+
+  @@index([accountId, createdAt])
+  @@index([videoId, createdAt])
+}
+
+// 视频收藏
+model VideoFavorite {
+  id          String   @id @default(cuid())
+  videoId     String
+  accountId   String
+  createdAt   DateTime @default(now())
+
+  video       Video        @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  account     VideoAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+
+  @@unique([videoId, accountId])
+  @@index([accountId, createdAt])
+}
+
+// 用户关注
+model UserFollow {
+  id          String   @id @default(cuid())
+  followerId  String   // 关注者 (视频账号ID)
+  followingId String   // 被关注者 (视频账号ID)
+  createdAt   DateTime @default(now())
+
+  follower    VideoAccount @relation("FollowFollower", fields: [followerId], references: [id], onDelete: Cascade)
+  following   VideoAccount @relation("FollowFollowing", fields: [followingId], references: [id], onDelete: Cascade)
+
+  @@unique([followerId, followingId])
+  @@index([followingId, createdAt])
+}
+
+// 认证申请
+model VideoCertification {
+  id              String   @id @default(cuid())
+  accountId       String
+  type            String   // white | yellow (白色对勾/黄色对勾)
+  status          String   @default("pending") // pending | approved | rejected
+  rejectReason    String?
+  reviewedById     String?
+  reviewedAt      DateTime?
+  scoreBonus      Int      @default(0) // 通过后加分
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  account         VideoAccount @relation(fields: [accountId], references: [id], onDelete: Cascade)
+  reviewedBy      User?        @relation("CertificationReviewedBy", fields: [reviewedById], references: [id])
+
+  @@index([accountId, status])
+  @@index([status, createdAt])
+}
+
+// 视频通知
+model VideoNotification {
+  id          String   @id @default(cuid())
+  accountId   String   // 接收通知的视频账号
+  type        String   // like | comment | follow | share | system
+  videoId     String?
+  commentId   String?
+  fromAccountId String? // 触发通知的账号
+  body        String
+  isRead      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+
+  account     VideoAccount @relation("NotificationRecipient", fields: [accountId], references: [id], onDelete: Cascade)
+  video       Video?       @relation(fields: [videoId], references: [id], onDelete: Cascade)
+  comment     VideoComment? @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  fromAccount VideoAccount? @relation("NotificationFrom", fields: [fromAccountId], references: [id])
+
+  @@index([accountId, isRead, createdAt])
+  @@index([createdAt])
+}
